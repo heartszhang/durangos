@@ -1,0 +1,392 @@
+﻿/* TV Details Page 
+    NOTE: When adjusting the widths of the "Seasons, Episodes or Episode description" hub sections
+    be sure to also update "min-width" for ".tvdetails-layout-secondaryhub" and "min-width" for ".tvdetails-layout-episodehub"
+    these affect the scrolling of the entire hub and if not correct may cause the last hub section to get clipped.
+*/
+
+.layout-detailspageheader .win-hub-viewport {
+    margin-top: 0;
+}
+
+.tvdetailsHub .win-hub-surface {
+    margin: 38px 18px 36px 118px; /*The margin right needs to + 18 pixel in order to overwrite the value from Xbox styles */
+    height: 806px;
+}
+
+    .tvdetailsHub .win-hub-section {
+        margin-right: 0;
+    }
+
+        .tvdetailsHub .win-hub-section-header {
+            margin-bottom: 0px;
+            height: 68px;
+        }
+
+.tvdetails-layout-overview-grid {
+    display: -ms-grid;
+    overflow: visible;
+    -ms-grid-rows: 208px 1fr;
+    -ms-grid-columns: auto;
+    height: 100%;
+}
+
+.text-metadata-image {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    background-image: url("/images/promoimage.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: transparent;
+    height: 208px;
+    width: 424px;   
+}
+
+/* Overview section */
+.tvdetails-layout-overview-buttons {
+    -ms-grid-row: 2;
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    margin-top: 40px;
+    width: 424px;
+}
+
+    .tvdetails-layout-overview-buttons > div {
+        margin: 4px 0px;
+    }
+
+.tvdetails-metadata-container {
+    height: 100%;
+    border: none;
+}
+
+.tvdetails-metadata-grid {
+    display: -ms-grid;
+    -ms-grid-rows: auto 40px auto 8px auto 37px auto 43px minmax(240px, 418px);
+    -ms-grid-columns: 1fr;
+    height: 100%;
+    width: 496px;
+    margin: 0 35px 0 44px;
+}
+
+.tvdetails-layout-title {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    overflow: hidden;
+    max-height: 220px;
+    margin-top: -12px; /* So the top of the text is in line with the image on the left */
+}
+
+.tvdetails-layout-date {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    overflow: hidden;
+}
+
+.tvdetails-layout-rating {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    overflow: hidden;
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+}
+
+.tvdetails-rating {
+    padding: 0 20px 0 0;
+}
+
+.tvdetails-numberofseasons {
+    padding: 0 10px 0 0;
+}
+
+.tvdetails-layout-userrating {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    overflow: hidden;
+    margin: 0 0 0 -5px;
+}
+
+    .tvdetails-layout-userrating.win-rating {
+        width: 184px;
+    }
+
+        .tvdetails-layout-userrating.win-rating .win-star {
+           font-size: 26px;
+           height: 28px;
+           width: 28px;
+        }
+
+.tvdetails-layout-description {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+}
+
+.tvdetails-layout-secondaryhub {
+    width: auto;
+    /* We set a minimum width, because the hub will calculate it's size & width
+       get the size wrong initially, unless we explicitly declare a minimum width.
+       having the wrong calculated width will affect the first animated scroll into view. */
+    min-width: 512px;
+}
+
+    .tvdetails-layout-secondaryhub .win-hub-section-header {
+        margin-left: 14px;
+    }
+
+    .tvdetails-layout-episodehub .win-hub-section-content,
+    .tvdetails-layout-secondaryhub .win-hub-section-content {
+        border-left: 1px;
+        border-style: solid;
+        border-top: 0;
+        border-right: 0;
+        border-bottom: 0;
+        border-color: rgb(58, 58, 58); /*XboxClr-Ui2*/
+        display: -ms-grid;
+        -ms-grid-columns: auto;
+        -ms-grid-rows: 1fr;
+    }
+
+    .tvdetails-layout-secondaryhub .win-hub-section-header-content {
+        padding-left: 36px;
+    }
+
+    .tvdetails-layout-secondaryhub .win-scrollviewer {
+        -ms-grid-column: 1;
+        width: auto;
+        height: 700px;
+    }
+
+/* Seasons section */
+.seasonslist {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    padding: 0;
+    margin: 0 35px 0 44px;
+}
+
+    .seasonslist .win-tile-centeredtext .win-item {
+        width: 424px;
+    }
+
+    .seasonslist .win-itemcontainer:not(:focus).win-tile-centeredtext .win-item {
+        background-color: transparent;
+        color: rgb(107, 107, 107); /*XboxClr-Ui4*/
+    }
+
+    .seasonslist .tvdetails-selectedseason:not(:focus).win-tile-centeredtext .win-item {
+        background-color: rgb(107,107,107); /*XboxClr-Ui3*/
+        color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+    }
+
+/* Episode section */
+.episodeshubsection .win-scrollindicator{
+    -ms-grid-column-align: center;
+    width: 424px;
+}
+
+.episodeslist {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    padding: 0;
+    margin: 0 35px 0 44px;
+}
+
+    .episodeslist .win-tile-centeredtext .win-item {
+        width: 424px;
+    }
+
+.tvdetails-episode:not(:focus).win-tile-centeredtext .win-item {
+    background-color: transparent;
+    color: rgb(107, 107, 107); /*XboxClr-Ui4*/
+}
+
+.episodeslist .tvdetails-selectedepisode:not(:focus).win-tile-centeredtext .win-item {
+    background-color: rgb(107,107,107); /*XboxClr-Ui3*/
+    color: rgb(235, 235, 235); /*XboxClr-VideoSafeWhite*/
+}
+
+.tvdetails-layout-episodehub {
+    /* The width is set to '600px' to make the total width of the page
+    long enough to allow the metadata to the left to scroll almost 
+    out of view. If the width is too small the scroll amount when the 
+    user navigated from the buttons array to the seasons list will be
+    too small. If the width is too large, then it will scroll too far over.
+    You may need to play with this value if you modify the overall width 
+    of the page. */
+    min-width: 600px;
+}
+
+    .tvdetails-layout-episodehub .layout-seasonmetadata {
+        margin-left: 44px;
+    }
+
+.layout-seasonmetadata {
+    -ms-grid-column: 2;
+    height: 700px;
+    width: 536px;
+    margin: 0 35px 0 44px;
+}
+
+.text-episode-title {
+    padding-top: 35px;
+}
+
+.layout-seasonmetadata > .ui-scrollcontrol-description.win-scrollviewer {
+    height: 282px;
+}
+
+.layout-seasonmetadatabutton {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+}
+
+    .layout-seasonmetadatabutton .win-tile-horizontaltext .win-item {
+        height: 100px;
+        width: 208px;
+    }
+
+.ui-scrollcontrol-description {
+    height: 200px;
+    width: 536px;
+    overflow: hidden;
+    padding-bottom: 24px;
+}
+
+.text-metadata-description {
+    line-height: 40px;
+    margin-top: 15px;
+}
+
+.tvdetails-selectedseason.win-tile-horizontaltext .win-item {
+    background: rgb(107,107,107); /*XboxClr-Ui3*/
+}
+
+.tvdetails-selectedepisode.win-tile-horizontaltext .win-item {
+    background: rgb(107,107,107); /*XboxClr-Ui3*/
+}
+
+.seasonslist .win-itemcontainer,
+.episodeslist .win-itemcontainer {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.tvdetails-snapped-overlay {
+    display: none;
+    -ms-grid-rows: 14px 218px 17px 188px 4px 100px 8px 100px 8px 100px 8px 100px;
+    -ms-grid-columns: 388px;
+}
+
+/* Move scroll indicators to the right to match the rest of the template */
+.win-scrollable .win-scrollable-up .win-overlay-arrowindicators, .win-scrollable .win-scrollable-down .win-overlay-arrowindicators {
+   margin-left: 374px;
+   visibility: visible;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .tvdetails-snapped-overlay {
+        display: -ms-grid;
+    }
+
+    #tvdetails-description-snapped {
+        overflow: hidden;
+        -ms-grid-row: 4;
+        height: 100%;
+    }
+
+    .win-listpicker-buttonlabel {
+        text-transform: none;
+        font-size: 18pt;
+    }
+
+    .text-metadata-image {
+        width: 388px;
+        height: 218px;
+        display: -ms-grid;
+        overflow: hidden;
+        -ms-grid-rows: 218px;
+        -ms-grid-columns: 388px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-color: transparent;
+    }
+    .layout-snapped2 {
+        -ms-grid-row: 2;
+    }
+
+    .layout-snapped4 {
+        -ms-grid-row: 4;
+        overflow:hidden;
+    }
+
+    .win-scrollindicator
+    {
+        margin-left: -36px
+    }
+
+    .layout-snapped6 {
+        -ms-grid-row: 6;
+    }
+
+    .layout-snapped8 {
+        -ms-grid-row: 8;
+    }
+
+    .layout-snapped10 {
+        -ms-grid-row: 10;
+    }
+
+    .layout-snapped12 {
+        -ms-grid-row: 12;
+    }
+
+    .win-overlay-contextindicator {
+        display: none;
+    }
+
+    .win-overlay .win-tile-centeredtext {
+        width: 388px;
+    }
+
+    .win-ui-light.win-flyout, .win-ui-light .win-flyout {
+        padding: 8px 8px 8px 44px;
+        margin-top: 8px;
+    }
+}
+
+@media screen and (-ms-view-state: filled) {
+    .ui-scrollcontrol-description {
+        width: 424px;
+    }
+
+    .layout-seasonmetadata > .ui-scrollcontrol-description.win-scrollviewer {
+        margin: 0px 0px;
+    }
+
+    .tvdetails-layout-secondaryhub {
+        /* In fill we need the minimum width to be smaller than full so that
+           the animated scroll into view still works. */
+        min-width: 400px;
+    }
+
+    .episodeslist {
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+        width: 332px;
+    }
+
+    .seasonslist {
+        display: -ms-flexbox;
+        -ms-flex-direction: column;
+        width: 332px;
+    }
+
+    .seasonslist .win-tile-centeredtext .win-item {
+        width: 314px;
+    }
+
+    .episodeslist .win-tile-centeredtext .win-item {
+        width: 314px;
+    }
+}

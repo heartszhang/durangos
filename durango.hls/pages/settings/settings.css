@@ -1,0 +1,67 @@
+﻿.layout-setting-panel {
+    display: -ms-flexbox;
+    -ms-flex-direction: row;
+    height: 645px;
+}
+
+.layout-settingbuttonlist {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    margin: 32px 50px 0px 99px;
+    width: auto;
+    height: 100%;
+    border-left: 0px;
+    border-right: 1px;
+    border-top: 0px;
+    border-bottom: 0px;
+    border-style: solid;
+    border-color: rgba(54, 54, 54, 1);
+}
+
+.layout-settingbuttonlist > .win-itemcontainer {
+    margin-bottom: 8px;
+    margin-right: 50px;
+}
+
+.layout-settingbuttonlist .win-tile-horizontaltext .win-item {
+    width: 208px;
+}
+
+.itemcontainer:focus .win-tile-horizontaltext .win-item {
+    background-color: rgb(235, 235, 235); /*XboxClr-VidoSafeWhite*/
+    color: rgb(34, 34, 34); /*XboxClr-Ui1*/
+}
+
+.layout-settinginfo1, layout-settinginfo2 {
+    display: -ms-flexbox;
+    -ms-flex-direction: column;
+    margin: 32px 150px 0px 0px;
+}
+
+.text-title-margin {
+    margin-bottom: 22px;
+}
+
+.text-margin {
+    margin-bottom: 38px;
+}
+
+.text-settings-subtitle {
+    line-height: 36px;
+    color: rgb(194, 194, 194); /*XboxClr-Ui5*/
+    text-transform: uppercase;
+}
+
+    .settings-snapped-gofullscreenbutton {
+        -ms-grid-row: 2;
+    }
+
+@media screen and (-ms-view-state: filled) {
+    .layout-setting-panel .win-surface {
+        margin: 0 0 0 0;
+    }
+
+    .layout-settingbuttonlist {
+        margin: 32px 50px 0px 52px;
+    }
+}

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>search</title>
+
+    <link href="search.css" rel="stylesheet" />
+    <script src="search.js" defer="defer"></script>
+</head>
+<body>
+
+    <div class="win-layout-titlesafeheader">
+        <button class="win-layout-backbutton" data-win-control="XboxJS.UI.BackButton"></button>
+        <div id="searchbox-title" class="searchbox-pagetitle win-text-pagetitle win-layout-pagetitle" data-win-res="{textContent: 'searchPageTitle'}">&nbsp;</div>
+        <div class="win-layout-applogo layout-showwhensnapped"><img src="/images/applogo.png" /></div>
+    </div>
+
+    <section class="searchbox win-layout-snappablebrowsegallery" aria-label="Main content" role="main">
+
+        <!-- Used for snapped mode -->
+        <div data-win-control="XboxJS.UI.ItemContainer" class="searchbox-snapped-gofullscreenbutton layout-showwhensnapped win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+             <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'unsnapButtonText'}"></div>
+        </div>
+        <div data-win-control="XboxJS.UI.ItemContainer" class="search-snapped-searchbutton layout-showwhensnapped win-tile-horizontaltext tile-brandbackground" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+             <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'searchLabel'}"></div>
+        </div>
+
+        <div class="searchbox-searchbox" data-win-control="XboxJS.UI.SearchBox"></div>
+
+        <div class="layout-gallerysortandfilterbuttons layout-hidewhensnapped">
+            <div class="searchbox-filter" data-win-control="XboxJS.UI.ListPicker"
+                data-win-options="{ label: '' }"
+                data-win-res="{ winControl: { label: 'galleryFilterLabel' } }">
+            </div>
+            <div class="searchbox-sort" data-win-control="XboxJS.UI.ListPicker"
+                data-win-options="{ label: '' }"
+                data-win-res="{ winControl: { label: 'gallerySortLabel' } }">
+            </div>
+
+        </div>
+        <div class="searchcontent">
+            <div class="emptysearchlabel win-type-large win-hidden" data-win-res="{textContent: 'searchNoResults'}"></div>
+            <div id="searchbox-listView" class="searchbox-listview" data-win-control="WinJS.UI.ListView" data-win-options="{ layout: { type: WinJS.UI.GridLayout }, selectionMode: 'none' }"></div>
+        </div>
+
+    </section>
+
+</body>
+</html>

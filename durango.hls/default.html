@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Media_App_Template</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.Xbox.WinJS.1.0/css/ui-light.css" rel="stylesheet" />
+    <link href="//Microsoft.Xbox.WinJS.1.0/css/xbox-ui-light.css" rel="stylesheet" />
+    <script src="//Microsoft.Xbox.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.Xbox.WinJS.1.0/js/ui.js"></script>
+    <script src="//Microsoft.Xbox.WinJS.1.0/js/xbox.js"></script>
+
+    <!-- A file containing helper functions for use by your application -->
+    <script src="js/utilities.js" defer="defer"></script>
+
+    <!-- Contains helper functions used for animations -->
+    <script src="js/animationUtilities.js" defer="defer"></script>
+
+    <!-- Media App Template references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js" defer="defer"></script>
+
+    <!-- TODO: Remove this sample data file once your application is hooked up to real data -->
+    <script src="/js/data.js" defer="defer"></script>
+
+    <!-- Data Models -->
+    <script src="js/dataModels/movieDataModel.js" defer="defer"></script>
+    <script src="js/dataModels/tvEpisodeDataModel.js" defer="defer"></script>
+    <script src="js/dataModels/tvSeriesDataModel.js" defer="defer"></script>
+    <script src="js/dataModels/tvSeasonDataModel.js" defer="defer"></script>
+    <script src="js/dataModels/queueDataModel.js" defer="defer"></script>
+
+    <!-- Data provider -->
+    <script src="js/dataProviders/myAppDataProvider.js" defer="defer"></script>
+
+</head>
+<body>
+    <!-- Extended Splash Screen -->
+    <div id="extendedsplashscreen" class="hidden">
+        <img id="extendedsplashscreenimage" src="/images/splashscreen-620x300.png" alt="Splash screen image" />
+        <progress id="extendedsplashscreenprogress" class="win-ring win-large"></progress>
+    </div>
+
+    <div id="contenthost" data-win-control="XboxJS.UI.Pages.PageControlNavigator"></div>
+    <div id="pageTransitionFader" class="win-hidden"></div>
+    <!-- AppBars are required for all media application. You may add what ever commands you like. -->
+    <div id="appbar" data-win-control="WinJS.UI.AppBar">
+        <button class="win-hidden" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{ id: 'addToQueueAppBarCommand', section: 'selection', icon: 'add' }" data-win-res="{ winControl: { label: 'actionsButtonAddQueue' } }" type="button"></button>
+        <button class="win-hidden" data-win-control="WinJS.UI.AppBarCommand" data-win-options="{ id: 'pinAppBarCommand', section: 'selection', icon: 'pin' }" data-win-res="{ winControl: { label: 'appBarPinAppLabel' } }" type="button"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{ id: 'homeAppBarCommand', section: 'global', icon: 'home' }" data-win-res="{ winControl: { label: 'appBarHomeLabel' } }" type="button"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{ id: 'searchAppBarCommand', section: 'global', icon: 'find' }" data-win-res="{ winControl: { label: 'appBarSearchLabel' } }" type="button"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{ id: 'switchUserAppBarCommand', section: 'global', icon: 'contact' }" data-win-res="{ winControl: { label: 'appBarSwitchUserLabel' } }" type="button">
+            <img id="userPicture" class="win-commandicon win-hidden" />
+        </button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{ id: 'settingsAppBarCommand', section: 'global', icon: 'settings' }" data-win-res="{ winControl: { label: 'appBarSettingsLabel' } }" type="button"></button>
+        <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{ id: 'helpAppBarCommand', section: 'global', icon: 'help' }" data-win-res="{ winControl: { label: 'appBarHelpLabel' } }" type="button"></button>
+    </div>
+    <progress class="win-progress-fullscreen win-hidden"></progress>
+</body>
+</html>

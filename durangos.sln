@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "durango.hello", "durango.hello\durango.hello.jsproj", "{922DEFB5-16CA-4AC3-9F9E-2655C97C6EC7}"
+EndProject
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "durango.hls", "durango.hls\durango.hls.jsproj", "{4363BEB7-2B80-4AB5-8317-7A4B2E039378}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Durango = Debug|Durango
+		Release|Durango = Release|Durango
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{922DEFB5-16CA-4AC3-9F9E-2655C97C6EC7}.Debug|Durango.ActiveCfg = Debug|Durango
+		{922DEFB5-16CA-4AC3-9F9E-2655C97C6EC7}.Debug|Durango.Build.0 = Debug|Durango
+		{922DEFB5-16CA-4AC3-9F9E-2655C97C6EC7}.Release|Durango.ActiveCfg = Release|Durango
+		{922DEFB5-16CA-4AC3-9F9E-2655C97C6EC7}.Release|Durango.Build.0 = Release|Durango
+		{922DEFB5-16CA-4AC3-9F9E-2655C97C6EC7}.Release|Durango.Deploy.0 = Release|Durango
+		{4363BEB7-2B80-4AB5-8317-7A4B2E039378}.Debug|Durango.ActiveCfg = Debug|Durango
+		{4363BEB7-2B80-4AB5-8317-7A4B2E039378}.Debug|Durango.Build.0 = Debug|Durango
+		{4363BEB7-2B80-4AB5-8317-7A4B2E039378}.Debug|Durango.Deploy.0 = Debug|Durango
+		{4363BEB7-2B80-4AB5-8317-7A4B2E039378}.Release|Durango.ActiveCfg = Release|Durango
+		{4363BEB7-2B80-4AB5-8317-7A4B2E039378}.Release|Durango.Build.0 = Release|Durango
+		{4363BEB7-2B80-4AB5-8317-7A4B2E039378}.Release|Durango.Deploy.0 = Release|Durango
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

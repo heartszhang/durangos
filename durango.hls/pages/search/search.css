@@ -1,0 +1,137 @@
+﻿.searchbox-pagetitle {
+    width: 300px;
+}
+
+.searchbox-searchbox {
+    margin-top: -100px;
+    margin-bottom: 32px;
+}
+
+.searchcontent .win-surface {
+    margin-left: 96px;
+    padding: 0px;
+}
+
+.searchbox-listview {
+    width:100%;
+    height: 659px;
+}
+
+.searchbox .layout-gallerysortandfilterbuttons {
+    margin-top: 20px;
+}
+
+.searchbox .win-searchbox-letterscontainer {
+    margin-top: 8px;
+}
+
+.searchcontent .win-mediatile,
+.searchcontent .win-itembox {
+    height: 424px;
+    width: 280px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .emptysearchlabel {        
+        -ms-grid-row: 1;
+        text-align: center;
+    }
+
+    .pagecontrol > .searchbox.win-layout-snappablebrowsegallery {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 16px 100px 8px 100px 8px 652px 1fr;
+        margin-top: 20px;
+    }
+
+    .search-pagetitle {
+        display: inline;
+    }
+
+    .searchbox-snapped-gofullscreenbutton {
+        -ms-grid-row: 2;
+    }
+
+    .search-snapped-searchbutton {
+        -ms-grid-row: 4;
+    }
+
+    .searchbox-searchbox {
+        display: none;
+    }
+
+    .searchcontent .win-surface {
+        margin: 0 0 0 0;
+        padding: 0px;
+    }
+
+    .searchbox-listview {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        height: 540px;
+    }
+
+    .searchcontent {
+        height: 100%;
+        -ms-grid-row: 6;
+        display: -ms-grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 1fr 10px 10px;
+    }
+
+    .searchcontent .win-mediatile,
+    .searchcontent .win-itembox {
+        height: 208px;
+        width: 388px;
+    }
+
+    .win-mediatile-layout-verticaltile .win-mediatile-metadatagrid {
+        -ms-grid-rows: 24px 160px 24px;
+        -ms-grid-columns: 24px 160px 24px 156px 24px;
+    }
+
+        .win-mediatile-layout-verticaltile .win-mediatile-metadatagrid > .win-mediatile-imagehost {
+            -ms-grid-row: 2;
+            -ms-grid-column: 2;
+            -ms-grid-row-span: 1;
+            -ms-grid-column-span: 1;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .win-mediatile-layout-verticaltile .win-mediatile-metadatagrid > .win-mediatile-metadata {
+            -ms-grid-row: 2;
+            -ms-grid-column: 4;
+            overflow: hidden;
+            display: -ms-grid;
+            -ms-grid-rows: auto 1fr;
+            -ms-grid-columns: 1fr;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+        }
+
+            .win-mediatile-layout-verticaltile .win-mediatile-metadatagrid > .win-mediatile-metadata > .win-mediatile-title {
+                -ms-grid-row: 1;
+                -ms-grid-column: 1;
+            }
+
+    .win-mediatile-layout-verticaltile .win-mediatile-description {
+        display: none;
+    }
+}
+
+@media screen and (-ms-view-state: filled) {
+    .searchcontent .win-surface {
+        margin: 0 0 0 96px;
+        padding: 0px;
+    }
+
+    .searchbox .win-mediatile {
+        height: 424px;
+        width: 280px;
+    }
+}

@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>durango.hello</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.Xbox.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <link href="//Microsoft.Xbox.WinJS.1.0/css/xbox-ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.Xbox.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.Xbox.WinJS.1.0/js/ui.js"></script>
+    <script src="//Microsoft.Xbox.WinJS.1.0/js/xbox.js"></script>
+
+  <script src="/js/utilities.js" defer="defer"></script>
+  <script src="/js/hlsmedia.js"></script>
+
+    <!-- durango.hello references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+
+</head>
+<body>
+  <div class="win-layout-pagegrid">
+    <div class="win-layout-titlesafecontent">
+      <button type="button" id="buttonTest">Test</button>
+      <button type="button" id="buttonClear">Clear</button>
+      <p id="key">Press buttons on the controller...</p>
+    </div>
+    <div id="player" style="margin-top:100px;background-color:#4cff00;" data-win-control="XboxJS.UI.MediaPlayer">
+        <video id="video" autoplay="autoplay"></video>
+    </div>
+  </div>
+</body>
+</html>

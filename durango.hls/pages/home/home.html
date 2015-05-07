@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>landing hub</title>
+
+    <link href="home.css" rel="stylesheet" />
+    <script src="home.js" defer="defer"></script>
+
+</head>
+<body>
+    <div class="win-layout-titlesafeheader layout-landingpageheader">
+        <button class="win-layout-backbutton" data-win-control="XboxJS.UI.BackButton"></button>
+        <div class="win-text-pagetitle win-layout-pagetitle layout-showwhensnapped" data-win-res="{textContent: 'landingPageTitle'}">&nbsp;</div>
+        <div class="win-layout-applogo"><img src="/images/applogo.png" /></div>
+    </div>
+
+    <section id="landing-hub" class="win-layout-edgetoedgehorizontalcontent landinghub layout-hidewhensnapped" data-win-control="XboxJS.UI.Hub" aria-label="Main content" role="main">
+
+        <!-- Action Button Gallery -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'landingHubSectionActions' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-landing-hub1">
+                <div id="landing-queuebutton" data-win-control="XboxJS.UI.ItemContainer" class="landing-actionbutton tile-brandbackground win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'landingActionQueue'}"></div>
+                </div>
+
+                <div id="landing-searchbutton" data-win-control="XboxJS.UI.ItemContainer" class="landing-actionbutton tile-brandbackground win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'searchLabel'}"></div>
+                </div>
+
+                <div id="landing-browseall" data-win-control="XboxJS.UI.ItemContainer" class="landing-actionbutton tile-brandbackground win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'landingActionBrowseAll'}"></div>
+                </div>
+
+                <div id="landing-action1" data-win-control="XboxJS.UI.ItemContainer" class="landing-actionbutton tile-brandbackground win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'landingActionDefault'}"></div>
+                </div>
+
+                <div id="landing-action2" data-win-control="XboxJS.UI.ItemContainer" class="landing-actionbutton tile-brandbackground win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'landingActionDefault'}"></div>
+                </div>
+
+                <div id="landing-moreactionsbutton" data-win-control="XboxJS.UI.ItemContainer" class="landing-actionbutton tile-brandbackground win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'actionsButtonMoreActions'}"></div>
+                </div>
+
+                <!-- More actions menu. -->
+                <div id="landing-moreactionsmenu" data-win-control="WinJS.UI.Flyout">
+                    <!-- These buttons are placeholders to show you what the "more actions" menu. Remove them if you don't need them. -->
+                      <div data-win-control="XboxJS.UI.ItemContainer" class="win-tile-listbutton" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                            <div class="win-text-tiletitle win-voice-inactivetext">Action 1</div>
+                        </div>
+                      <div data-win-control="XboxJS.UI.ItemContainer" class="win-tile-listbutton" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                            <div class="win-text-tiletitle win-voice-inactivetext">Action 2</div>
+                        </div>
+                      <div data-win-control="XboxJS.UI.ItemContainer" class="win-tile-listbutton" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                            <div class="win-text-tiletitle win-voice-inactivetext">Action 3</div>
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Featured Hub Section -->
+        <div class="layout-hub-section-space" data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'landingHubSectionFeatured' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+             <div class="layout-landing-featuredhubsection layout-landing-section-grid">
+                <div class="layout-landing-featured-slot1 featureditem big-tile" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="layout-landing-featured-slot2 featureditem wide-tile" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="layout-landing-featured-slot3 featureditem wide-tile" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="layout-landing-featured-slot4 featureditem wide-tile" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="layout-landing-featured-slot5 featureditem wide-tile" data-win-control="XboxJS.UI.MediaTile"></div>
+                 <div id="landing-morefeaturedmovies" data-win-control="XboxJS.UI.ItemContainer" class="layout-landing-hub-section-more win-tile-more" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-text-tiletitle')}">
+                    <div class="win-icon-more"></div>
+                    <div class="win-text-tiletitle" data-win-res="{ textContent: 'homeMoreFeatured'}"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New Movies Hub Section -->
+        <div class="layout-hub-section-space" data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'landingHubSectionNewMovies' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-landing-newmovieshubsection layout-landing-section-grid">
+                <div class="layout-landing-new-slot1 newmovie wide-tile" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="layout-landing-new-slot2 newmovie wide-tile" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="layout-landing-new-slot3 newmovie wide-tile" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div id="landing-morefeaturedtv" data-win-control="XboxJS.UI.ItemContainer" class="layout-landing-hub-section-more win-tile-more" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-text-tiletitle')}">
+                    <div class="win-icon-more"></div>
+                    <div class="win-text-tiletitle" data-win-res="{ textContent: 'homeMoreNewMovies'}"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- New TV Hub Section -->
+        <div class="layout-hub-section-space" data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'landingHubSectionNewTv' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div id="landing-newtv" class="landing-newtv-container" data-win-control="XboxJS.UI.Repeater" data-win-options="{layout: 'horizontal'}">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Used for snapped mode -->
+    <div class="landing-snapped-overlay win-layout-titlesafecontent">
+        <div id="snapped-movies-browse" data-win-control="XboxJS.UI.ItemContainer" class="landing-snapped-browsemoviesbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'moviesSystemTileBrowse'}"></div>
+        </div>
+        <div id="snapped-tv-browse" data-win-control="XboxJS.UI.ItemContainer" class="landing-snapped-browsetvbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'tvSystemTileBrowse'}"></div>
+        </div>
+        <div data-win-control="XboxJS.UI.ItemContainer" class="landing-snapped-gofullscreenbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'unsnapButtonText'}"></div>
+        </div>
+    </div>
+</body>
+</html>

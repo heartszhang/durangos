@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:mx="http://schemas.microsoft.com/appx/2013/xbox/manifest" IgnorableNamespaces="mx">
+  <Identity Name="6b0598f5-88ff-439f-aa84-294698218ef8" Version="1.0.0.0" Publisher="CN=BesTV" />
+  <Properties>
+    <DisplayName>durango.hello</DisplayName>
+    <PublisherDisplayName>BesTV</PublisherDisplayName>
+    <Logo>images\logo-store.png</Logo>
+  </Properties>
+  <Prerequisites>
+    <OSMinVersion>6.2.1</OSMinVersion>
+    <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+  </Prerequisites>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <Application Id="App" StartPage="default.html">
+      <VisualElements DisplayName="durango.hello" Logo="images\logo.png" SmallLogo="images\logo-small.png" Description="durango.hello" ForegroundText="light" BackgroundColor="#464646" ToastCapable="true">
+        <DefaultTile ShowName="allLogos" ShortName="durango.hello" WideLogo="images/logo-wide.png" />
+        <SplashScreen Image="images\splash.png" />
+      </VisualElements>
+      <!--     --> <Extensions>
+
+        <mx:Extension Category="xbox.live">
+          <mx:XboxLive TitleId="3300A81D" PrimaryServiceConfigId="1ef70100-41f9-49ca-9867-77c23300a81d" RequireXboxLive="true"/>
+        </mx:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClientServer" />
+  </Capabilities>
+  <Dependencies>
+    <PackageDependency Name="Microsoft.Xbox.WinJS.1.0" MinVersion="1.0.0.0" Publisher="CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+  </Dependencies>
+</Package>

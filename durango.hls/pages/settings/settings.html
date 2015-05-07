@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>settings</title>
+
+    <link href="settings.css" rel="stylesheet" />
+    <script src="settings.js" defer="defer"></script>
+
+</head>
+<body>
+    <div class="win-layout-titlesafeheader">
+        <button class="win-layout-backbutton" data-win-control="XboxJS.UI.BackButton"></button>
+        <div id="setting-title" class="win-text-pagetitle win-layout-pagetitle" data-win-res="{textContent: 'settingsPageTitle'}">&nbsp;</div>
+        <div class="win-layout-applogo layout-showwhensnapped"><img src="/images/applogo.png" /></div>
+    </div>
+    <section class="win-layout-edgetoedgehorizontalcontent layout-hidewhensnapped" aria-label="Main content" role="main">
+
+        <!-- TODO: Replace the placeholder data below with data from your service -->
+        <div class="layout-setting-panel">
+            <div class="layout-settingbuttonlist">
+
+                <div id="settings-help" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'helpButton'}"></div>
+                    </div>
+
+                 <div data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'termsofserviceButton'}"></div>
+                </div>
+                <div id="settings-pinapp" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'pinAppToHomeButton'}"></div>
+                </div>
+
+            </div>
+
+            <!-- Account Information -->
+            <div class="layout-settinginfo1 win-type-x-small">
+                 <div class="text-title-margin win-type-large" data-win-res="{textContent: 'settingsPersonalInformationLabel'}"></div>
+                 <div class="text-settings-subtitle" data-win-res="{textContent: 'settingsAccountName'}"></div>
+                <div class="text-margin">John Smith</div>
+                 <div class="text-settings-subtitle" data-win-res="{textContent: 'settingsAccountType'}"></div>
+                <div class="text-margin">Digital Premium</div>
+                 <div class="text-settings-subtitle" data-win-res="{textContent: 'settingsAccountNumber'}"></div>
+                <div>987-654-321</div>
+            </div>
+            <div class="layout-settinginfo2 win-type-x-small">
+                 <div class="text-title-margin win-type-large" data-win-res="{textContent: 'settingsSupportInformationLabel'}"></div>
+                 <div class="text-settings-subtitle" data-win-res="{textContent: 'settingsSupportUrl'}"></div>
+                <div class="text-margin">www.contoso.com/support</div>
+                 <div class="text-settings-subtitle" data-win-res="{textContent: 'settingsSupportEmail'}"></div>
+                 <div class="text-margin" >support@contoso.com</div>
+                 <div class="text-settings-subtitle" data-win-res="{textContent: 'settingsSupportPhone'}"></div>
+                <div>(123) 456-7890</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Used for snapped mode -->
+    <div class="default-snapped-overlay win-layout-titlesafecontent">
+         <div data-win-control="XboxJS.UI.ItemContainer" class="settings-snapped-gofullscreenbutton layout-snappedbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'unsnapButtonText'}"></div>
+        </div>
+
+
+    </div>
+</body>
+</html>

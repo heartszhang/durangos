@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/2010/manifest"
+         xmlns:build="http://schemas.microsoft.com/developer/appx/2012/build"
+         xmlns:mx="http://schemas.microsoft.com/appx/2013/xbox/manifest" IgnorableNamespaces="build">
+    <Identity Name="mediaapp" Version="1.0.0.0" Publisher="CN=Contoso" ProcessorArchitecture="x64" />
+    <Properties>
+        <DisplayName>Media App Template</DisplayName>
+        <PublisherDisplayName>Contoso</PublisherDisplayName>
+        <Logo>images\storelogo-50x50.png</Logo>
+    </Properties>
+    <Prerequisites>
+        <OSMinVersion>6.2.1</OSMinVersion>
+        <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+    </Prerequisites>
+    <Resources>
+        <Resource Language="x-generate" />
+    </Resources>
+    <Applications>
+        <Application Id="App" StartPage="default.html">
+            <VisualElements DisplayName="Media App Template" Logo="images\logo-208x208.png" SmallLogo="images\smalllogo-100x100.png" Description="This is a sample media application." ForegroundText="light" BackgroundColor="#101010">
+                <DefaultTile ShowName="allLogos" WideLogo="images\widelogo-480x480.png" />
+                <SplashScreen Image="images\splashscreen-620x300.png"  BackgroundColor="#101010"/>
+                <!-- The following XML let's the system know which view states your app supports (the full screen view state is not listed because it is assumed to be supported by all apps) -->
+                <mx:ViewStates>
+                    <mx:ViewState Name="snapped"></mx:ViewState>
+                    <mx:ViewState Name="filled"></mx:ViewState>
+                </mx:ViewStates>
+            </VisualElements>
+            <Extensions>
+                <Extension Category="windows.search" />
+                <mx:Extension Category="xbox.live">
+                    <mx:XboxLive TitleId="3300A81D" PrimaryServiceConfigId="1ef70100-41f9-49ca-9867-77c23300a81d" RequireXboxLive="true"/>
+                </mx:Extension>
+            </Extensions>
+            <!-- Rating your app as 3+ means your app handles parental controls. If you are using this template, it will. -->
+            <mx:Ratings Category="application">
+                <mx:Rating>Microsoft:3</mx:Rating>
+            </mx:Ratings>
+        </Application>
+    </Applications>
+    <Extensions>
+        <mx:PackageExtension Category="windows.kinect">
+            <mx:Kinect IsVersionLocked="false">
+                <mx:AudioPipeline Version="1.0.0" />
+                <mx:SpeechPipeline Version="1.1.0" />
+                <mx:VisionPipeline Version="1.0.0" />
+            </mx:Kinect>
+        </mx:PackageExtension>
+    </Extensions>
+    <Capabilities>
+        <Capability Name="internetClientServer" />
+        <!-- If you are using parental controls, then you need the  capability below. -->
+        <mx:Capability Name="contentRestrictions"/>
+        <!-- If you are using PlayReady, then you need the device capability below. If not, you can remove it. -->
+        <DeviceCapability Name="6a7e5907-885c-4bcb-b40a-073c067bd3d5"/>
+    </Capabilities>
+    <Dependencies>
+        <PackageDependency Name="Microsoft.Xbox.WinJS.1.0" MinVersion="1.0.0.0" Publisher="CN=Microsoft Windows, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
+        <!-- If you are using the Microsoft Smooth Streaming SDK, then you need to specify the dependency below. -->
+        <PackageDependency Name="Microsoft.Media.AdaptiveStreamingClient" MinVersion="1.0.0.0" />
+        <!-- If you are using PlayReady, then you need to specify the dependency below. -->
+        <PackageDependency Name="Microsoft.Media.PlayReadyClient.2" MinVersion="2.7.0.0" />
+    </Dependencies>
+</Package>

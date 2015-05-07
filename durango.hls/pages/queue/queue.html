@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    <link href="queue.css" rel="stylesheet" />
+    <script src="queue.js" defer="defer"></script>
+
+</head>
+<body>
+
+     <div class="win-layout-titlesafeheader">
+        <button class="win-layout-backbutton" data-win-control="XboxJS.UI.BackButton"></button>
+        <div id="queue-pagetitle" class="win-text-pagetitle win-layout-pagetitle" data-win-res="{textContent: 'queuePageTitle'}">&nbsp;</div>
+        <div class="win-layout-applogo layout-showwhensnapped"><img src="/images/applogo.png" /></div>
+    </div>
+    <section class="win-layout-snappablebrowsegallery queuecollection">
+
+        <!-- Used for snapped mode -->
+        <div data-win-control="XboxJS.UI.ItemContainer" class="queue-snapped-gofullscreenbutton layout-showwhensnapped">
+            <div class="win-tile-horizontaltext  layout-snappedbutton" data-win-voice="{ voiceElement: select('.win-tile-horizontaltext-text') }">
+                <div class="win-tile-horizontaltext-text" data-win-res="{textContent: 'unsnapButtonText'}"></div>
+            </div>
+        </div>
+
+        <div class="emptyqueuelabel win-type-large" data-win-res="{textContent: 'emptyQueueMessage'}"></div>
+        <div class="browsequeue">
+            <div id="queue-listview" class="queue" data-win-control="WinJS.UI.ListView" data-win-options="{ layout: { type: WinJS.UI.GridLayout }, selectionMode: 'none' }"></div>
+        </div>
+    </section>
+
+</body>
+</html>

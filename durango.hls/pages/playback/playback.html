@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>playback</title>
+
+    <link href="playback.css" rel="stylesheet" />
+    <script src="playback.js"></script>
+</head>
+<body>
+    <div id="mediaPlayer" class="win-layout-fullscreencontent" data-win-control="XboxJS.UI.MediaPlayer">
+        <video id="video" autoplay="autoplay"></video>
+    </div>
+    <div id="postRollOverlay" class="post-roll-overlay win-hidden layout-hidewhensnapped">
+        <div id="postroll-replaybutton" class="post-roll-replay tile-brandbackground win-tile-systemicon" data-win-control="XboxJS.UI.ItemContainer"
+            data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-tile-systemicon-icon win-icon-replay"></div>
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'playbackReplay'}"></div>
+        </div>
+        <div class="post-roll-related-label" data-win-res="{textContent: 'playbackWatchRelated'}"></div>
+        <div class="post-roll-related-item related1" data-win-control="XboxJS.UI.MediaTile"></div>
+        <div class="post-roll-related-item related2" data-win-control="XboxJS.UI.MediaTile"></div>
+        <div class="post-roll-related-item related3" data-win-control="XboxJS.UI.MediaTile"></div>
+    </div>
+</body>
+</html>

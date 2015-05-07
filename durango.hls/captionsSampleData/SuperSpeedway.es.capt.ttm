@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tt xmlns:ttm="http://www.w3.org/ns/ttml#metadata" xmlns:tts="http://www.w3.org/ns/ttml#styling" xmlns:ttp="http://www.w3.org/ns/ttml#parameter" xml:lang="es" xmlns="http://www.w3.org/ns/ttml">
+  <head>
+    <metadata>
+      <ttm:title />
+      <ttm:desc />
+      <ttm:copyright />
+    </metadata>
+    <styling>
+      <style xml:id="backgroundStyle" tts:fontFamily="proportionalSansSerif" tts:fontSize="150%" tts:textAlign="center" tts:origin="10% 80%" tts:extent="90% 10%" tts:backgroundColor="rgba(0,0,0,0)" tts:displayAlign="center" />
+      <style xml:id="speakerStyle" style="backgroundStyle" tts:color="white" tts:textOutline="black 1px" tts:backgroundColor="transparent" />
+    </styling>
+    <layout>
+      <region xml:id="speaker" style="speakerStyle" tts:zIndex="1" />
+      <region xml:id="background" style="backgroundStyle" tts:zIndex="0" />
+    </layout>
+  </head>
+  <body>
+    <div>
+      <p region="speaker" begin="00:00:01:00" end="00:00:02:00">Hola antonia</p>
+      <p region="speaker" begin="00:00:02:00" end="00:00:04:00">¿Mike viene?</p>
+      <p region="speaker" begin="00:00:04:00" end="00:00:08:00">Afirmativo, Mike se aproxima</p>
+      <p region="speaker" begin="00:00:08:20" end="00:00:13:00">No te olvides, que viajamos juntos en el escenario,</p>
+      <p region="speaker" begin="00:00:13:00" end="00:00:16:00">durante cuatro años hemos completado uno contra el otro</p>
+      <p region="speaker" begin="00:00:16:60" end="00:00:19:11">A decir verdad, a tener mucha diversión con su hijo </p>
+      <p region="speaker" begin="00:00:19:17" end="00:00:21:01">es un raro privilegio</p>
+      <p region="speaker" begin="00:00:21:06" end="00:00:24:29">es muy muy especial </p>      
+    </div>
+  </body>
+</tt>
