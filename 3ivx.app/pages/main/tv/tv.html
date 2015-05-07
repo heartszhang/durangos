@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>tv</title>
+
+    <link href="tv.css" rel="stylesheet" />
+    <script src="tv.js" defer="defer"></script>
+
+</head>
+<body>
+    <div class="hub-tv" data-win-control="XboxJS.UI.Hub">
+        <!-- New TV Shows -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'tvHubSectionNewReleasesTVShowsLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-tv-section1-grid">
+                <div class="win-layout-mediatilelargesquare layout-tv-section1-slot1 newtv" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-mediatile-layout-horizontaltv layout-tv-section1-slot2 newtv" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-mediatile-layout-horizontaltv layout-tv-section1-slot3 newtv" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-mediatile-layout-horizontaltv layout-tv-section1-slot4 newtv" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-mediatile-layout-horizontaltv layout-tv-section1-slot5 newtv" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div data-win-control="XboxJS.UI.ItemContainer" class="layout-tv-section1-more win-tile-more" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-text-tiletitle')}">
+                    <div class="win-icon-more"></div>
+                    <div class="win-text-tiletitle" data-win-res="{ textContent: 'tvMoreNewTVShows'}"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular TV Shows -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'tvHubSectionPopularTVShowsLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-tv-section2-grid">
+                <div class="win-mediatile-layout-horizontaltv layout-tv-section2-slot1 tvpopular" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-mediatile-layout-horizontaltv layout-tv-section2-slot2 tvpopular" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-mediatile-layout-horizontaltv layout-tv-section2-slot3 tvpopular" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div data-win-control="XboxJS.UI.ItemContainer" class="layout-tv-section2-more win-tile-more" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-text-tiletitle')}">
+                    <div class="win-icon-more"></div>
+                    <div class="win-text-tiletitle" data-win-res="{ textContent: 'tvMorePopularTVShows'}"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'tvHubSectionSystemButtonsLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-tv-section3-grid">
+                <div id="tv-browse" data-win-control="XboxJS.UI.ItemContainer" class="layout-tv-section3-slot1 win-tile-systemicon tile-brandbackground" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-tile-systemicon-icon win-icon-browse"></div>
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'tvSystemTileBrowse'}"></div>
+                </div>
+                <div id="tv-search" data-win-control="XboxJS.UI.ItemContainer" class="layout-tv-section3-slot2 win-tile-systemicon tile-brandbackground" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-tile-systemicon-icon win-icon-search"></div>
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'tvSystemTileSearch'}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

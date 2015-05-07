@@ -1,0 +1,154 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+// TODO: Add all of the strings you need to use for your application's UI here. The convention
+// used below is the strings are organized by the page they appear on.
+{
+    // Browse page
+    "browseallPageTitle" : "Browse All",
+    "browsemoviesPageTitle" : "Browse Movies",
+    "browsetvPageTitle" : "Browse TV",
+    "browseNewTVReleasesPageTitle" : "New TV Releases",
+    "browsePopularTVPageTitle" : "Popular TV",
+    "browseNewMoviesPageTitle" : "New Movies",
+    "browsePopularMoviesPageTitle" : "Popular Movies",
+    "featuredMoviesPageTitle" : "Featured Movies",
+    "featuredTVPageTitle" : "Featured TV",
+
+    // Details
+    "detailsHubSectionOverviewLabel" : "Overview",
+    "detailsHubSectionDescriptionLabel" : " ",
+    "detailsHubSectionRelatedLabel" : "Related",
+
+    // Errors
+    "addToQueueErrorDescription" : "There was a problem adding the item to your queue. Please try again later.",
+    "addToQueueErrorTitle" : "Could not add item to your queue",
+    "removeFromQueueErrorDescription" : "There was a problem removing the item from your queue. Please try again later.",
+    "removeFromQueueErrorTitle" : "Could not remove item from your queues",
+    "contentNotFoundErrorDescription" : "The content isn't available anymore.",
+    "contentNotFoundErrorTitle" : "Content not found",
+    "networkErrorDescription": "There’s a problem connecting to Contoso. Try again in a few minutes.",
+    "networkErrorTitle": "Cannot connect to Contoso",
+    "pinToHomeErrorDescription" : "There was a problem pinning the item to home. Please try again later.",
+    "pinToHomeErrorTitle" : "Could not pin item to home",
+    "unpinFromHomeErrorDescription" : "There was a problem unpinning the item from home. Please try again later.",
+    "unpinFromHomeErrorTitle" : "Could not unpin item from home",
+    "unexpectedErrorDescription" : "The app encountered a problem and needs to close.",
+    "unexpectedErrorTitle" : "Something went wrong",
+
+    // Global
+    "actionsButtonPlay" : "Play",
+    "actionsButtonAddQueue" : "Add to queue",
+    "actionsButtonRemoveQueue" : "Remove from queue",
+    "actionsButtonRate" : "Rate",
+    "actionsButtonMoreActions" : "More actions",
+    "appBarHelpLabel" : "Help",
+    "appBarHomeLabel" : "Home",
+    "appBarPinAppLabel" : "Pin to home",
+    "appBarSearchLabel" : "Search",
+    "appBarSettingsLabel" : "Settings",
+    "appBarSwitchUserLabel" : "Switch User",
+    "appBarUnpinAppLabel" : "Unpin from home",
+    "applicationName" : "Contoso",
+    "filterLabel": "Change Filter",
+    "filterByMediaTypeLabel" : "All",
+    "filterByMediaTypeOptionAll" : "All",
+    "filterByMediaTypeOptionMovies" : "Movies",
+    "filterByMediaTypeOptionTV" : "TV",
+    "galleryFilterLabel" : "Change Filter",
+    "galleryFilterOptionAll" : "All",
+    "galleryFilterOptionTV" : "TV",
+    "galleryFilterOptionMovies" : "Movies",
+    "gallerySortLabel" : "Change Sort",
+    "gallerySortOptionAscending" : "A-Z",
+    "gallerySortOptionDescending" : "Z-A",
+    "searchLabel" : "Search",
+    "sortAlphabeticallyAToZ" : "A-Z",
+    "sortAlphabeticallyLabel" : "Alphabetically",
+    "sortAlphabeticallyZToA" : "Z-A",
+    "unsnapButtonText" : "Snap to Full View",
+
+    //Landing page
+    "landingActionBrowseAll" : "Browse All",
+    "landingActionDefault" : "Action",
+    "landingHubSectionActions" : " ",
+    "landingHubSectionNewTv" : "New TV",
+    "landingHubSectionFeatured" : "Featured",
+    "landingHubSectionNewMovies" : "New Movies",
+    "landingActionQueue" : "Queue",
+    "landingPageTitle" : "Home",
+
+    // Hub home page
+    "homeHubSectionFeaturedMoviesLabel" : "Featured Movies",
+    "homeHubSectionFeaturedTVShowsLabel" : "Featured TV Shows",
+    "homeHubSectionSystemButtonsLabel" : " ",
+    "homePivotLabel" : "Home",
+    "homeSystemTileBrowse" : "Browse All",
+    "homeSystemTileQueue" : "Queue",
+    "homeMoreFeatured" : "More Featured",
+    "homeMoreFeaturedMovies": "More Featured Movies",
+    "homeMoreFeaturedTVShows": "More Featured TV Shows",
+    "homeMoreNewMovies" : "More New Movies",
+
+    // Hub movies page
+    "moviesHubSectionNewReleasesLabel" : "New Releases",
+    "moviesHubSectionPopularMoviesLabel" : "Popular Movies",
+    "moviesHubSectionSystemButtonsLabel" : " ",
+    "moviesPivotLabel" : "Movies",
+    "moviesSystemTileBrowse" : "Browse Movies",
+    "moviesSystemTileSearch" : "Search Movies",
+    "moviesMoreNewReleases": "More New Releases",
+    "moviesMorePopularMovies": "More Popular Movies",
+
+    // Hub TV page
+    "tvHubSectionNewReleasesTVShowsLabel" : "New TV Shows",
+    "tvHubSectionPopularTVShowsLabel" : "Popular TV Shows",
+    "tvHubSectionSystemButtonsLabel" : " ",
+    "tvPivotLabel" : "TV",
+    "tvSystemTileBrowse" : "Browse TV",
+    "tvSystemTileSearch" : "Search TV",
+    "tvMoreNewTVShows": "More New TV Shows",
+    "tvMorePopularTVShows": "More Popular TV Shows",
+
+    // Playback page
+    "playbackReplay": "Replay",
+    "playbackWatchRelated" : "Watch related",
+
+    // Search page
+    "searchNoResults" : "We didn't find anything. Try searching for something else.",
+    "searchPageTitle" : "Results for ",
+    "searchPlaceHolderText" : "search...",
+
+    // Settings page
+    "helpButton" : "Help",
+    "settingsAccountName" : "Name:",
+    "settingsAccountNumber" : "Account:",
+    "settingsAccountType" : "Account Type:",
+    "settingsPageTitle" : "Settings",
+    "settingsPersonalInformationLabel" : "Personal Information",   
+    "settingsSupportEmail" : "Email:",
+    "settingsSupportInformationLabel" : "Customer Support Infomation",
+    "settingsSupportPhone" : "Phone:",
+    "settingsSupportUrl" : "Website:",
+    "termsofserviceButton" : "Terms of Service",
+    "pinAppToHomeButtonLabel" : "Pin app to home",
+    "unpinAppToHomeButtonLabel" : "Unpin app from home",
+
+    // Sign in page
+    "signinError" : "To use this app, you need to be signed in.",
+    "signInLabel" : "Sign in",
+
+    // TV Details
+    "tvdetailsPlayLabel" : "Play",
+    "tvdetailsHubSectionOverviewLabel" : "Overview",
+    "tvdetailsHubSectionSeasonsLabel" : "Seasons",
+    "tvdetailsHubSectionEpisodesLabel" : "Episodes",
+    "tvdetailsEmptyLabel" : " ",
+    "tvdetailsEpisodeLabel" : "Episode ",
+    "tvdetailsNumberOfEpisodeLabel" : " episodes",
+    "tvdetailsSeasonLabel" : "Season ",
+    "tvDetailsChooseSeasonLabel" : "Choose Season",
+    "tvDetailsChooseEpisodeLabel" : "Choose Episode",
+
+    // Queue page
+    "queuePageTitle" : "Queue",
+    "emptyQueueMessage" : "You have nothing in your queue."
+}

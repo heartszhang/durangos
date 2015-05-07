@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>movie details</title>
+
+    <link href="details.css" rel="stylesheet" />
+    <script src="details.js" defer="defer"></script>
+
+</head>
+<body>
+    <div class="win-layout-titlesafeheader layout-detailspageheader">
+        <button class="win-layout-backbutton" data-win-control="XboxJS.UI.BackButton"></button>
+        <div id="details-pagetitle" class="win-text-pagetitle win-layout-pagetitle">&nbsp;</div>
+        <div class="win-layout-applogo layout-showwhensnapped"><img src="/images/applogo.png" /></div>
+    </div>
+
+    <section id="details-hub" class="win-layout-edgetoedgehorizontalcontent detailshub layout-hidewhensnapped" data-win-control="XboxJS.UI.Hub" aria-label="Main content" role="main">
+
+        <!-- Overview -->
+        <div class="details-hub-overview" data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'detailsHubSectionOverviewLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            
+            <div class="details-layout-overview-grid">
+
+                <div class="details-layout-overview-image"></div>
+                <div class="details-layout-overview-buttons">
+                    <!-- We put a data-win-focus override in the up direction so that pressing up from the play button will stay on that button -->
+                    <div id="details-playbutton" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext win-tile-underline" data-win-focus="{ up: '#details-playbutton' }" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                        <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'actionsButtonPlay'}"></div>
+                       </div>
+
+                    <div id="details-queuebutton" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                        <div class="win-text-tiletitle win-voice-inactivetext"></div>
+                    </div>
+
+                    <div id="details-ratingpicker" data-win-control="XboxJS.UI.RatingPicker" class="win-tile-underline" data-win-res="{ winControl: { label: 'actionsButtonRate' } }"></div>
+
+                    <div id="details-moreactionsbutton" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext win-tile-underline" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                        <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'actionsButtonMoreActions'}"></div>
+                    </div>
+
+                    <!-- More actions menu. -->
+                    <div id="details-moreactionsmenu" data-win-control="WinJS.UI.Flyout">
+                        <div id="details-pinbutton" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-listbutton" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'appBarPinAppLabel'}"></div>
+                        </div>
+                         <!-- These buttons are placeholders to show you what the "more actions" menu looks like with more buttons. -->
+                        <div data-win-control="XboxJS.UI.ItemContainer" class="win-tile-listbutton" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                            <div class="win-text-tiletitle win-voice-inactivetext">Action 2</div>
+                        </div>
+                        <div data-win-control="XboxJS.UI.ItemContainer" class="win-tile-listbutton" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                            <div class="win-text-tiletitle win-voice-inactivetext">Action 3</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Metadata:
+             Feel free to add or remove metadata so that this section has the fields that make sense for your application. -->
+        <div class="details-hub-description" data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'detailsHubSectionDescriptionLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="details-layout-grid-description">
+                <div id="details-title" class="details-layout-title win-type-medium">&nbsp;</div>
+                <div id="details-date" class="details-layout-date win-type-small">&nbsp;</div>
+                <div id="details-rating" class="details-layout-rating win-type-small">&nbsp;</div>
+                <div id="details-userrating" class="details-layout-userrating win-invisible" data-win-control="WinJS.UI.Rating">&nbsp;</div>
+                <div class="details-layout-description">
+                    <div id="details-description" class="win-type-small">&nbsp;</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Items -->
+        <div class="details-hub-related" data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'detailsHubSectionRelatedLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="details-related" data-win-control="XboxJS.UI.Repeater" data-win-options="{layout: 'horizontal'}">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Used for snapped mode -->
+    <div class="details-snapped-overlay win-layout-titlesafecontent">
+        <div class="details-layout-overview-image layout-snapped2"></div>
+        <div id="details-description-snapped" class="win-type-small">&nbsp;</div>
+        <div id="details-playbutton-snapped" data-win-control="XboxJS.UI.ItemContainer" class="layout-snapped6 layout-snappedbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'actionsButtonPlay'}"></div>
+        </div>
+        <div id="details-queuebutton-snapped" data-win-control="XboxJS.UI.ItemContainer" class="layout-snapped8 layout-snappedbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext"></div>
+           </div>
+         <div data-win-control="XboxJS.UI.ItemContainer" class="details-snapped-gofullscreenbutton layout-snapped10 win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'unsnapButtonText'}"></div>
+        </div>
+    </div>
+
+</body>
+</html>

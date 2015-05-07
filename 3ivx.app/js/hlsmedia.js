@@ -526,8 +526,12 @@
 
                     if (this._stream) {
                         this._wireStream();
-                        console.log("hlsmedia: stream = " + this._stream.uri);
 
+                        try {
+                            console.log("hlsmedia: stream = " + this._stream.uri);
+                        } catch (e) {
+                            console.log("hlsmedia: stream unable to access property; stream possibly shutdown");
+                        }
                     }
                 }
             },
@@ -923,8 +927,8 @@
                             that._mediaPlayer._endTime = that.duration;
                             that._mediaPlayer._totalTime = that._mediaPlayer._endTime - that._mediaPlayer._startTime;
 
-                          //  that._mediaPlayer._updateTimelineVisuals();
-                          //  that._mediaPlayer._updateMediaState(false);
+                            that._mediaPlayer._updateTimelineVisuals();
+                            that._mediaPlayer._updateMediaState(false);
                         }
                     }
                 }
@@ -960,6 +964,9 @@
                 // set maximumBitrate to user value
                 this._stream.maximumBitrate = this._maximumBitrate;
                 this._stream.minimumBitrate = this._minimumBitrate;
+
+                // Ensures that all events are current
+                this._stream.eventHandlersReady = true;
 
             },
             _unwireStream: function () {

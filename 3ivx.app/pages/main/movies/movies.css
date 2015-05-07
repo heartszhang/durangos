@@ -1,0 +1,105 @@
+﻿/* Movies hub */
+.hub-movies {
+    height:inherit;
+    width:inherit;
+}
+
+/* We don't want the hub to be draggable with gesture so we set -ms-touch action to none */
+.hub-movies .win-hub-viewport {
+    -ms-touch-action: none;
+}
+
+    .hub-movies .win-hub-section-header {
+       margin-top: 20px;
+    }
+
+/* Hub Section 1 */
+.layout-movies-section1-grid {
+    display: -ms-grid;
+    -ms-grid-rows: 424px 8px 208px 8px auto 1fr;
+    -ms-grid-columns: 208px 8px 208px 8px 208px 8px 208px;
+}
+
+    .layout-movies-section1-slot1 {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+    }
+
+    .layout-movies-section1-slot2 {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 5;
+        -ms-grid-column-span: 3;
+    }
+
+    .layout-movies-section1-more {
+        -ms-grid-row: 5;
+        -ms-grid-column:7;
+        -ms-grid-column-align:end;
+    }
+
+/* Hub Section 2 */
+.layout-movies-section2-grid {
+    display: -ms-grid;
+    -ms-grid-rows: 208px 8px 208px 8px 208px 8px auto 1fr;
+    -ms-grid-columns: 424px;
+}
+
+    .layout-movies-section2-slot1 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .layout-movies-section2-slot2 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .layout-movies-section2-slot3 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+
+    .layout-movies-section2-more {
+        -ms-grid-row: 7;
+        -ms-grid-column:1;
+        -ms-grid-column-align:end;
+    }
+
+/* Hub Section 3 */
+.layout-movies-section3-grid {
+    display: -ms-grid;
+    -ms-grid-rows: 208px 8px 208px 8px 208px;
+    -ms-grid-columns: 208px;
+}
+
+    .layout-movies-section3-slot1 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .layout-movies-section3-slot2 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .layout-movies-section3-slot3 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+
+@media screen and (-ms-view-state: filled) {
+.layout-movies-section1-grid {
+    -ms-grid-columns: 208px 8px 208px;
+    }
+
+    .layout-movies-section1-slot2 {
+        display: none;
+    }
+
+    .layout-movies-section1-more {
+        -ms-grid-column:3;
+    }
+}

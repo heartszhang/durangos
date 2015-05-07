@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>tv details</title>
+
+    <link href="tvdetails.css" rel="stylesheet" />
+    <script src="tvdetails.js" defer="defer"></script>
+
+</head>
+<body>
+    <div class="win-layout-titlesafeheader layout-detailspageheader">
+        <button class="win-layout-backbutton" data-win-control="XboxJS.UI.BackButton"></button>
+        <div id="tvdetails-pagetitle" class="win-text-pagetitle win-layout-pagetitle">&nbsp;</div>
+        <div class="win-layout-applogo layout-showwhensnapped"><img src="/images/applogo.png" /></div>
+    </div>
+
+    <section id="tvdetails-hub" class="win-layout-edgetoedgehorizontalcontent tvdetailsHub layout-hidewhensnapped" data-win-control="XboxJS.UI.Hub" aria-label="Main content" role="main">
+
+        <!-- Overview -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'tvdetailsHubSectionOverviewLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="tvdetails-layout-overview-grid">
+
+                <div id="tvdetails-seriesimage" class="text-metadata-image"></div>
+
+                <div class="tvdetails-layout-overview-buttons">
+                    <!-- We put a data-win-focus override in the up direction so that pressing up from the play button will stay on that button -->
+                    <div id="tvdetails-playbutton" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext win-tile-underline" data-win-focus="{ right: '.tvdetails-selectedseason', up: '#tvdetails-playbutton' }" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                        <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'tvdetailsPlayLabel'}"></div>
+                    </div>
+
+                    <div id="tvdetails-queuebutton" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext win-tile-underline" data-win-focus="{ up: '#details-playbutton' }" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                        <div class="win-text-tiletitle win-voice-inactivetext"></div>
+                    </div>
+
+                    <div id="tvdetails-ratingpicker" class="win-tile-underline" data-win-control="XboxJS.UI.RatingPicker" data-win-res="{ winControl: { label: 'actionsButtonRate' } }"></div>
+
+                    <div id="tvdetails-moreactionsbutton" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext win-tile-underline" data-win-focus="{ right: '.tvdetails-selectedseason' }" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                        <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'actionsButtonMoreActions'}"></div>
+                    </div>
+
+                    <!-- More actions menu. -->
+                    <div id="tvdetails-moreactionsmenu" data-win-control="WinJS.UI.Flyout">
+                        <div id="tvdetails-pinbutton" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-listbutton" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'appBarPinAppLabel'}"></div>
+                        </div>
+                        <!-- These buttons are placeholders to show you what the "more actions" menu looks like. -->
+                        <div data-win-control="XboxJS.UI.ItemContainer" class="win-tile-listbutton" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                            <div class="win-text-tiletitle win-voice-inactivetext">Action 2</div>
+                        </div>
+                        <div data-win-control="XboxJS.UI.ItemContainer" class="win-tile-listbutton" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                            <div class="win-text-tiletitle win-voice-inactivetext">Action 3</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Series Overview -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="tvdetails-metadata-container">
+                <div class="tvdetails-metadata-grid">
+                    <div id="tvdetails-seasontitle" class="tvdetails-layout-title win-type-medium">&nbsp;</div>
+                    <div id="tvdetails-date" class="tvdetails-layout-date win-type-small">&nbsp;</div>
+
+                    <div class="tvdetails-layout-rating">
+                        <div id="tvdetails-metadata-rating" class="tvdetails-rating win-type-small">&nbsp;</div>
+                        <div id="tvdetails-metadata-numberofseasons" class="tvdetails-numberofseasons win-type-small">&nbsp;</div>
+                    </div>
+
+                    <div id="tvdetails-userrating" class="tvdetails-layout-userrating win-invisible" data-win-control="WinJS.UI.Rating"></div>
+                    <div class="tvdetails-layout-description" data-win-control="XboxJS.UI.ScrollViewer" data-win-options="{ scrollMode: XboxJS.UI.ScrollMode.text }">
+                        <div id="tvdetails-metadata-description" class="win-type-small">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seasons List -->
+        <div class="tvdetails-layout-secondaryhub" data-win-control="XboxJS.UI.HubSection" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="seasonshubsection" data-win-control="XboxJS.UI.ScrollViewer" data-win-options="{ scrollMode: XboxJS.UI.ScrollMode.list }">
+                <div class="seasonslist" data-win-control="XboxJS.UI.Repeater">
+                </div>
+            </div>
+        </div>
+
+        <!-- Episode List -->
+        <div class="tvdetails-layout-secondaryhub" data-win-control="XboxJS.UI.HubSection" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="episodeshubsection" data-win-control="XboxJS.UI.ScrollViewer" data-win-options="{ scrollMode: XboxJS.UI.ScrollMode.list }">
+                <div class="episodeslist" data-win-control="XboxJS.UI.Repeater">
+                </div>
+            </div>
+        </div>
+
+        <!-- TV Episode Details -->
+        <div data-win-control="XboxJS.UI.HubSection" class="tvdetails-layout-episodehub" data-win-res="{ winControl: { header: 'tvdetailsEmptyLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-seasonmetadata win-type-small">
+                <div class="layout-imagecenteringcontainer">
+                    <div id="tvdetails-episodeimage" class="text-metadata-image"></div>
+                </div>
+                <div class="ui-metadata-flexbox">
+                    <div class="text-episode-title">&nbsp;</div>
+                    <div class="text-episode-metadata">&nbsp;</div>
+                </div>
+                <div class="ui-scrollcontrol-description">
+                    <div id="tvdetails-episode-description" class="text-metadata-description win-type-small">&nbsp;</div>
+                </div>
+                <div class="layout-seasonmetadatabutton">
+                    <!-- We put a data-win-focus override in the up direction so that pressing up from the play button will stay on that button -->
+                    <div id="tvdetails-episode-playbutton" data-win-control="XboxJS.UI.ItemContainer" class="win-tile-horizontaltext" data-win-focus="{ up: '#tvdetails-episode-playbutton', left: '.tvdetails-selectedepisode' }" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                        <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'tvdetailsPlayLabel'}"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Used for snapped mode -->
+    <div class="tvdetails-snapped-overlay win-layout-titlesafecontent">
+
+        <div class="layout-snapped2">
+            <div id="tvdetails-snapped-seasonImage" class="layout-imagecenteringcontainer-snapped">
+                <div class="text-metadata-image text-metadata-image"></div>
+            </div>
+        </div>
+        <div id="tvdetails-description-snapped" class="win-type-small layout-snapped4">&nbsp;</div>
+        <div id="tvdetails-seasonsmenu-snapped" data-win-control="XboxJS.UI.ListPicker" class="layout-snapped6 layout-snappedbutton"></div>
+        <div id="tvdetails-episodesmenu-snapped" data-win-control="XboxJS.UI.ListPicker" class="layout-snapped8 layout-snappedbutton"></div>
+        <div id="tvdetails-playbutton-snapped" data-win-control="XboxJS.UI.ItemContainer" class="layout-snapped10 layout-snappedbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'actionsButtonPlay'}"></div>
+        </div>
+        <div data-win-control="XboxJS.UI.ItemContainer" class="tvdetails-snapped-gofullscreenbutton layout-snapped12 win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'unsnapButtonText'}"></div>
+        </div>
+
+    </div>
+
+</body>
+</html>

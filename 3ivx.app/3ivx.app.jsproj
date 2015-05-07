@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Durango">
+      <Configuration>Debug</Configuration>
+      <Platform>Durango</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Durango">
+      <Configuration>Release</Configuration>
+      <Platform>Durango</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>e0db64b7-1cb6-42e9-b1a3-24e3dd1b7f9a</ProjectGuid>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
+    <VisualStudioVersion>11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).Default.props" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
+  <PropertyGroup>
+    <DefaultLanguage>en-US</DefaultLanguage>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="default.html" />
+    <Content Include="images\applogo.png" />
+    <Content Include="images\logo-208x208.png" />
+    <Content Include="images\movieposter.png" />
+    <Content Include="images\placeholder.png" />
+    <Content Include="images\promoimage.png" />
+    <Content Include="images\smalllogo-100x100.png" />
+    <Content Include="images\splashscreen-620x300.png" />
+    <Content Include="images\storelogo-50x50.png" />
+    <Content Include="images\tvshow.png" />
+    <Content Include="images\widelogo-480x480.png" />
+    <Content Include="js\animationUtilities.js" />
+    <Content Include="js\data.js" />
+    <Content Include="js\dataModels\movieDataModel.js" />
+    <Content Include="js\dataModels\queueDataModel.js" />
+    <Content Include="js\dataModels\tvEpisodeDataModel.js" />
+    <Content Include="js\dataModels\tvSeasonDataModel.js" />
+    <Content Include="js\dataModels\tvSeriesDataModel.js" />
+    <Content Include="js\dataProviders\myAppDataProvider.js" />
+    <Content Include="js\default.js" />
+    <Content Include="css\default.css" />
+    <Content Include="js\hlsmedia.js" />
+    <Content Include="js\utilities.js" />
+    <Content Include="MediaAppEvents.dll" />
+    <Content Include="MediaAppUtilities.dll" />
+    <Content Include="MediaAppUtilities.winmd" />
+    <Content Include="pages\browseAll\browseAll.css" />
+    <Content Include="pages\browseAll\browseAll.html" />
+    <Content Include="pages\browseAll\browseAll.js" />
+    <Content Include="pages\browseMovies\browseMovies.css" />
+    <Content Include="pages\browseMovies\browseMovies.html" />
+    <Content Include="pages\browseMovies\browseMovies.js" />
+    <Content Include="pages\browseTV\browseTV.css" />
+    <Content Include="pages\browseTV\browseTV.html" />
+    <Content Include="pages\browseTV\browseTV.js" />
+    <Content Include="pages\details\details.css" />
+    <Content Include="pages\details\details.html" />
+    <Content Include="pages\details\details.js" />
+    <Content Include="pages\main\home\home.css" />
+    <Content Include="pages\main\home\home.html" />
+    <Content Include="pages\main\home\home.js" />
+    <Content Include="pages\main\main.css" />
+    <Content Include="pages\main\main.html" />
+    <Content Include="pages\main\main.js" />
+    <Content Include="pages\main\movies\movies.css" />
+    <Content Include="pages\main\movies\movies.html" />
+    <Content Include="pages\main\movies\movies.js" />
+    <Content Include="pages\main\tv\tv.css" />
+    <Content Include="pages\main\tv\tv.html" />
+    <Content Include="pages\main\tv\tv.js" />
+    <Content Include="pages\playback\playback.css" />
+    <Content Include="pages\playback\playback.html" />
+    <Content Include="pages\playback\playback.js" />
+    <Content Include="pages\queue\queue.css" />
+    <Content Include="pages\queue\queue.html" />
+    <Content Include="pages\queue\queue.js" />
+    <Content Include="pages\search\search.css" />
+    <Content Include="pages\search\search.html" />
+    <Content Include="pages\search\search.js" />
+    <Content Include="pages\settings\settings.css" />
+    <Content Include="pages\settings\settings.html" />
+    <Content Include="pages\settings\settings.js" />
+    <Content Include="pages\signin\signin.css" />
+    <Content Include="pages\signin\signin.html" />
+    <Content Include="pages\signin\signin.js" />
+    <Content Include="pages\tvdetails\tvdetails.css" />
+    <Content Include="pages\tvdetails\tvdetails.html" />
+    <Content Include="pages\tvdetails\tvdetails.js" />
+    <Content Include="winrtprovider.winmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <PRIResource Include="strings\en-US\resources.resjson" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="3ivx HLS Client SDK v2.0.0 B173 for Xbox One, Version=2.0.0.360" />
+    <SDKReference Include="Xbox Services API, Version=8.0" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
+  <!-- To modify your build process, add your task inside one of the targets below then uncomment
+       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

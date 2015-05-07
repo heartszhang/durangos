@@ -1,0 +1,112 @@
+﻿/* Home hub */
+.hub-home {
+    height:inherit;
+    width:inherit;
+}
+
+/* We don't want the hub to be draggable with gesture so we set -ms-touch action to none */
+ .hub-home .win-hub-viewport {
+    -ms-touch-action: none;
+}
+
+    .hub-home .win-hub-section-header {
+       margin-top: 20px;
+    }
+
+/* Hub Section 1 */
+.layout-home-section1-grid {
+    display: -ms-grid;
+    -ms-grid-rows: 424px 8px 208px 8px 64px;
+    -ms-grid-columns: 424px 8px 424px;
+}
+
+    .layout-home-section1-slot1 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-row-span: 3;
+    }
+
+    .layout-home-section1-slot2 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
+    .layout-home-section1-slot3 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 3;
+    }
+
+    .layout-home-section1-more {
+        -ms-grid-row: 5;
+        -ms-grid-column: 3;
+        -ms-grid-column-align: end;
+    }
+
+/* Hub Section 2 */
+.layout-home-section2-grid {
+    display: -ms-grid;
+    -ms-grid-rows: 424px 8px 208px 8px 64px;
+    -ms-grid-columns: 208px 8px 208px;
+}
+
+    .layout-home-section2-slot1 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+    }
+
+    .layout-home-section2-slot2 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .layout-home-section2-slot3 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 3;
+    }
+
+    .layout-home-section2-more {
+        -ms-grid-row: 5;
+        -ms-grid-column: 3;
+        -ms-grid-column-align:end;
+    }
+
+/* Hub Section 3 */
+.layout-home-section3-grid {
+    display: -ms-grid;
+    -ms-grid-rows: 208px 8px 208px 8px 208px;
+    -ms-grid-columns: 208px;
+}
+
+    .layout-home-section3-slot1 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .layout-home-section3-slot2 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .layout-home-section3-slot3 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+
+@media screen and (-ms-view-state: filled) {
+.layout-home-section1-grid {
+    -ms-grid-columns: 424px ;
+}
+
+    .layout-home-section1-slot2 {
+        display: none;
+    }
+
+    .layout-home-section1-slot3 {
+       display: none;
+    }
+
+    .layout-home-section1-more {
+        -ms-grid-column: 1;
+    }
+}

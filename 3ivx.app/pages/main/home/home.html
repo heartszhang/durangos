@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>home</title>
+
+    <link href="home.css" rel="stylesheet" />
+    <script src="home.js" defer="defer"></script>
+
+</head>
+<body>
+
+    <div class="hub-home" data-win-control="XboxJS.UI.Hub">
+
+        <!-- Featured Movies -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'homeHubSectionFeaturedMoviesLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-home-section1-grid">
+                <div class="win-layout-mediatilelargeportrait layout-home-section1-slot1 featuredmovie" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-layout-mediatilelargesquare layout-home-section1-slot2 featuredmovie" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-mediatile-layout-horizontalmovie layout-home-section1-slot3 featuredmovie" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div data-win-control="XboxJS.UI.ItemContainer" class="layout-home-section1-more win-tile-more" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-text-tiletitle')}">
+                    <div class="win-icon-more"></div>
+                    <div class="win-text-tiletitle" data-win-res="{ textContent: 'homeMoreFeaturedMovies'}"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Featured TV Shows -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'homeHubSectionFeaturedTVShowsLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-home-section2-grid">
+                <div class="layout-home-section2-slot1 tvfeatureditem win-layout-mediatilelargesquare" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="layout-home-section2-slot2 tvfeatureditem win-layout-mediatilesmallsquare" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="layout-home-section2-slot3 tvfeatureditem win-layout-mediatilesmallsquare" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div data-win-control="XboxJS.UI.ItemContainer" class="layout-home-section2-more win-tile-more" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-text-tiletitle')}">
+                    <div class="win-icon-more"></div>
+                    <div class="win-text-tiletitle" data-win-res="{ textContent:'homeMoreFeaturedTVShows'}"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'homeHubSectionSystemButtonsLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-home-section3-grid">
+                <div id="home-queue" data-win-control="XboxJS.UI.ItemContainer" class="layout-home-section3-slot1 win-tile-systemicon tile-brandbackground" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-tile-systemicon-icon win-icon-queue"></div>
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'homeSystemTileQueue'}"></div>
+                </div>
+                <div id="home-search" data-win-control="XboxJS.UI.ItemContainer" class="layout-home-section3-slot2 win-tile-systemicon tile-brandbackground" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-tile-systemicon-icon win-icon-search"></div>
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'searchLabel'}"></div>
+                </div>
+                <div id="home-browse" data-win-control="XboxJS.UI.ItemContainer" class="layout-home-section3-slot3 win-tile-systemicon tile-brandbackground" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-tile-systemicon-icon win-icon-browse"></div>
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'homeSystemTileBrowse'}"></div>
+                </div>
+            </div>
+        </div>
+
+     </div>
+
+</body>
+</html>

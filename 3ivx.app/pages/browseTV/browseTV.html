@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>browse</title>
+
+    <link href="browseTV.css" rel="stylesheet" />
+    <script src="browseTV.js" defer="defer"></script>
+</head>
+<body>
+
+    <div class="win-layout-titlesafeheader">
+        <button class="win-layout-backbutton" data-win-control="XboxJS.UI.BackButton"></button>
+        <div id="browse-title" class="win-text-pagetitle win-layout-pagetitle" data-win-res="{textContent: 'browsetvPageTitle'}">&nbsp;</div>
+        <div class="win-layout-applogo layout-showwhensnapped"><img src="/images/applogo.png" /></div>
+    </div>
+
+    <section class="win-layout-snappablebrowsegallery" aria-label="Main content" role="main">
+
+        <!-- Used for snapped mode -->
+        <div data-win-control="XboxJS.UI.ItemContainer" class="browsetv-snapped-gofullscreenbutton layout-showwhensnapped win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'unsnapButtonText'}"></div>
+        </div>
+        <div class="layout-gallerysortandfilterbuttons layout-hidewhensnapped">
+            <div class="browsetv-filter" data-win-control="XboxJS.UI.ListPicker"
+                data-win-options="{ label: '' }"
+                data-win-res="{ winControl: { label: 'galleryFilterLabel' } }">
+            </div>
+            <div class="browsetv-sort" data-win-control="XboxJS.UI.ListPicker"
+                data-win-options="{ label: '' }"
+                data-win-res="{ winControl: { label: 'gallerySortLabel' } }">
+            </div>
+             <div data-win-control="XboxJS.UI.ItemContainer" class="browsetv-search win-tile-galleryheader" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'searchLabel'}"></div>
+            </div>
+        </div>
+        <div class="browsetv">
+            <div class="browsetv-loading"></div>
+            <div class="browsetv-listview" data-win-control="WinJS.UI.ListView" data-win-options="{ layout: { type: WinJS.UI.GridLayout }, selectionMode: 'none' }"></div>
+        </div>
+    </section>
+
+</body>
+</html>

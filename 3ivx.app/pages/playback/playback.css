@@ -1,0 +1,93 @@
+﻿/* Playback Page */
+
+/* Styles for the closed captions menu */
+.captions-flyout .win-scrollviewer-contentelement {
+    -ms-overflow-x: visible; 
+    -ms-overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+.captions-flyout .win-scrollviewer {
+    width: 448px; /* The width needs to be greater than the size of the ItemContainer otherwise the ItemContainer borders will get cut off */
+    margin-left: -12px; /* This margin is necessary to center the ItemContainer in the flyout */
+}
+
+
+.captions-flyout .win-scrollviewer .win-overlay-arrowindicators {
+    visibility: visible;
+    -ms-grid-column: 3;
+    -ms-grid-column-align: end;
+    margin-top: 90px;
+}
+
+.win-voice-voicemodeactive.captions-flyout .win-overlay-voiceindicators {
+    display: -ms-grid;
+    -ms-grid-columns: 16px 1fr 1fr 16px;
+    margin-top: 100px;
+}
+
+.captions-flyout .win-overlay-scrollupindicator {
+    margin-left: 100px;
+}
+
+.captions-flyout .win-overlay-pageupindicator {
+    -ms-grid-column: 2;
+    -ms-grid-column-align: start;
+}
+
+.captions-flyout .win-overlay-pagedownindicator {
+    -ms-grid-column: 3;
+    -ms-grid-column-align: center;
+}
+
+.captions-flyout .win-itemcontainer {
+    height: 100px;
+    width: 424px;
+    margin-left: 8px; /* This margin correctly centers the ItemContainer */
+}
+
+/* PostRoll Overlay styles */
+.post-roll-overlay {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: -ms-grid;
+    padding: 35px;
+    -ms-grid-rows: 35px 208px;
+    -ms-grid-columns: 208px 32px 208px 8px 208px 8px 208px;
+     background-color: rgba(16, 16, 16, 0.65); /*XboxClr-VideoSafeBlack*/
+}
+
+.post-roll-overlay.win-hidden {
+    display: none;
+}
+
+.post-roll-related-label {
+    color: rgb(235, 235, 235);
+    -ms-grid-column: 3;
+    -ms-grid-row: 1;
+    -ms-grid-column-span: 5;
+    height: 35px;
+    margin-top: -16px;
+}
+
+.post-roll-replay {
+    margin-top: 0;
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+}
+
+.post-roll-overlay .related1 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+}
+
+.post-roll-overlay .related2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 5;
+}
+
+.post-roll-overlay .related3 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 7;
+}

@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>922defb5-16ca-4ac3-9f9e-2655c97c6ec7</ProjectGuid>
+    <ProjectGuid>015e4851-583e-4eb2-9ced-fd63caa93d64</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition="'$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0'">
     <VisualStudioVersion>11.0</VisualStudioVersion>
@@ -21,35 +21,40 @@
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).props" />
   <PropertyGroup>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateThumbprint>E7996EA81EA11172A8F46AE7AC21805BFE70C180</PackageCertificateThumbprint>
-    <PackageCertificateKeyFile>durango.hello_TemporaryKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="css\default.css" />
     <Content Include="default.html" />
-    <Content Include="js\hlsmedia.js" />
-    <Content Include="js\utilities.js" />
-    <None Include="durango.hello_TemporaryKey.pfx" />
-    <Content Include="images\logo-badge.png" />
-    <Content Include="images\logo-small.png" />
-    <Content Include="images\logo-store.png" />
-    <Content Include="images\logo-wide.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
-    <Content Include="images\splash.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
     <Content Include="js\default.js" />
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="js\hlsmedia.js" />
+    <Content Include="js\utilities.js" />
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="3ivx HLS Client SDK v2.0.0 B173 for Xbox One, Version=2.0.0.360" />
+    <SDKReference Include="Xbox Services API, Version=8.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MediaAppUtilities">
+      <HintPath>MediaAppUtilities.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+      <Implementation>MediaAppUtilities.dll</Implementation>
+    </Reference>
+    <Reference Include="winrtprovider">
+      <HintPath>winrtprovider.winmd</HintPath>
+      <IsWinMDFile>true</IsWinMDFile>
+      <Implementation>MediaAppEvents.dll</Implementation>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\$(WMSJSProjectDirectory)\Microsoft.VisualStudio.$(WMSJSProject).targets" />
   <!-- To modify your build process, add your task inside one of the targets below then uncomment
-       that target and the DisableFastUpToDateCheck PropertyGroup. 
+       that target and the DisableFastUpToDateCheck PropertyGroup.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

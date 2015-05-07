@@ -1,0 +1,39 @@
+﻿.win-tabview {
+   margin-top: -16px;
+}
+
+.main-snapped-overlay {
+    display: none;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .main-snapped-overlay {
+        display: -ms-grid;
+        -ms-grid-rows: 1fr 100px 8px 100px 8px 0 100px 76px;
+        -ms-grid-columns: 1fr;
+    }
+
+    .main-snapped-browsemoviesbutton {
+        -ms-grid-row: 2;
+    }
+
+    .main-snapped-browsetvbutton {
+        -ms-grid-row: 4;
+    }
+
+   .main-snapped-gofullscreenbutton {
+        -ms-grid-row: 7;
+    }
+}
+
+@media screen and (-ms-view-state: filled) {
+    .layout-mainpageheader .win-layout-titlesafeheader {
+        display: -ms-grid;
+        -ms-grid-columns: 1fr;
+        -ms-grid-rows: 64px 1fr;
+    }
+
+    .layout-mainpageheader .win-layout-pagetitle {
+        display: none;
+    }
+}

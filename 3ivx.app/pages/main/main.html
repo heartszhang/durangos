@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>main</title>
+
+    <link href="main.css" rel="stylesheet" />
+    <script src="main.js" defer="defer"></script>
+
+</head>
+<body>
+    <div class="win-layout-titlesafeheader layout-mainpageheader">
+        <button class="win-layout-backbutton" data-win-control="XboxJS.UI.BackButton"></button>
+        <div class="win-text-pagetitle win-layout-pagetitle layout-showwhensnapped" data-win-res="{textContent: 'landingPageTitle'}">&nbsp;</div>
+        <div class="win-layout-applogo"><img src="/images/applogo.png" /></div>
+    </div>
+    <div id="pageContainer" class="win-layout-titlesafecontent layout-hidewhensnapped">
+        <div id="mainpageTabControl"  data-win-control="XboxJS.UI.TabView">
+            
+            <!-- Home -->
+            <!-- Note: We use '&nbsp;' as the header title so that the TabView can properly size the header container to avoid
+                 shifting the page around when the localized resources come in. -->
+            <div data-win-control="XboxJS.UI.Tab" data-win-res="{ winControl: { header: 'homePivotLabel' } }" data-win-options="{ header: '&nbsp;' }">
+                <div data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/pages/main/home/home.html'}"></div>
+            </div>
+
+            <!-- Movies -->
+            <!-- Note: We use '&nbsp;' as the header title so that the TabView can properly size the header container to avoid
+                 shifting the page around when the localized resources come in. -->
+            <div data-win-control="XboxJS.UI.Tab" data-win-res="{ winControl: { header: 'moviesPivotLabel' } }" data-win-options="{ header: '&nbsp;' }">
+                <div data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/pages/main/movies/movies.html'}"></div>
+            </div>
+
+            <!-- TV -->
+            <!-- Note: We use '&nbsp;' as the header title so that the TabView can properly size the header container to avoid
+                 shifting the page around when the localized resources come in. -->
+            <div data-win-control="XboxJS.UI.Tab" data-win-res="{ winControl: { header: 'tvPivotLabel' } }" data-win-options="{ header: '&nbsp;' }">
+                <div data-win-control="WinJS.UI.HtmlControl" data-win-options="{uri: '/pages/main/tv/tv.html'}"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Used for snapped mode -->
+    <div class="main-snapped-overlay win-layout-titlesafecontent">
+        <div id="snapped-movies-browse" data-win-control="XboxJS.UI.ItemContainer" class="main-snapped-browsemoviesbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'moviesSystemTileBrowse'}"></div>
+        </div>
+        <div id="snapped-tv-browse" data-win-control="XboxJS.UI.ItemContainer" class="main-snapped-browsetvbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'tvSystemTileBrowse'}"></div>
+        </div>
+        <div data-win-control="XboxJS.UI.ItemContainer" class="main-snapped-gofullscreenbutton win-tile-horizontaltext" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+            <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'unsnapButtonText'}"></div>
+        </div>
+    </div>
+</body>
+</html>

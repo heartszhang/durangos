@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>movies</title>
+
+    <link href="movies.css" rel="stylesheet" />
+    <script src="movies.js" defer="defer"></script>
+
+</head>
+<body>
+
+    <div class="hub-movies" data-win-control="XboxJS.UI.Hub">
+
+        <!-- New Releases -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'moviesHubSectionNewReleasesLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-movies-section1-grid">
+                <div class="win-layout-mediatilelargeportrait layout-movies-section1-slot1 newmovie" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-layout-mediatilelargeportrait layout-movies-section1-slot2 newmovie" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div data-win-control="XboxJS.UI.ItemContainer" class="layout-movies-section1-more win-tile-more" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-text-tiletitle')}">
+                    <div class="win-icon-more"></div>
+                    <div class="win-text-tiletitle" data-win-res="{ textContent: 'moviesMoreNewReleases'}"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popular Movies -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'moviesHubSectionPopularMoviesLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-movies-section2-grid">
+                <div class="win-mediatile-layout-horizontalmovie layout-movies-section2-slot1 popularmovie" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-mediatile-layout-horizontalmovie layout-movies-section2-slot2 popularmovie" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div class="win-mediatile-layout-horizontalmovie layout-movies-section2-slot3 popularmovie" data-win-control="XboxJS.UI.MediaTile"></div>
+                <div data-win-control="XboxJS.UI.ItemContainer" class="layout-movies-section2-more win-tile-more" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-text-tiletitle')}">
+                    <div class="win-icon-more"></div>
+                    <div class="win-text-tiletitle" data-win-res="{ textContent: 'moviesMorePopularMovies'}"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div data-win-control="XboxJS.UI.HubSection" data-win-res="{ winControl: { header: 'moviesHubSectionSystemButtonsLabel' } }" data-win-options="{ header: '&nbsp;', isHeaderStatic: true }">
+            <div class="layout-movies-section3-grid">
+                <div id="movies-browse" data-win-control="XboxJS.UI.ItemContainer" class="layout-movies-section3-slot1 win-tile-systemicon tile-brandbackground" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-tile-systemicon-icon win-icon-browse"></div>
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'moviesSystemTileBrowse'}"></div>
+                </div>
+                <div id="movies-search" data-win-control="XboxJS.UI.ItemContainer" class="layout-movies-section3-slot2 win-tile-systemicon tile-brandbackground" data-win-voice="{ srcElement: select('.win-text-tiletitle'), targetElement: select('.win-voice-textdisplay')}">
+                    <div class="win-tile-systemicon-icon win-icon-search"></div>
+                    <div class="win-text-tiletitle win-voice-inactivetext" data-win-res="{textContent: 'moviesSystemTileSearch'}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

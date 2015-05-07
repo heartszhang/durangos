@@ -1,0 +1,51 @@
+﻿.signin section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+
+.signin-signin {
+    position: absolute;
+    left: 108px;
+    top: 720px;
+}
+
+.signin-message {
+    position: absolute;
+    top: 240px;
+    left: 108px;
+    width: calc(100vw - 216px);
+}
+
+.signin .win-layout-applogo {
+    margin-top: 36px;
+    margin-left: -10px;
+}
+
+/* Sign in button text override */
+.signin-signin .win-text-tiletitle,
+.signin-signin .win-voice-textdisplay 
+ {
+    text-transform: none;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .signin section[role=main] {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .signin-signin {
+        position: absolute;
+        top: 720px;
+        left: 50px;
+    }
+
+    .signin-message {
+        left: 50px;
+        width: calc(100vw - 80px);
+    }
+
+    .signin .win-layout-applogo {
+        margin-top: 47px;
+        margin-left: 8px;
+    }
+}

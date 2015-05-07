@@ -1,0 +1,49 @@
+﻿/* My Queue Page */
+
+/* A class that when removed, tells the user there are no items in the queue */
+.emptyqueuelabel {
+    text-align: center;
+    -ms-grid-row: 4;
+    display:none;
+}
+
+.browsequeue .win-surface {
+    margin-left: 103px;
+    padding: 0px;
+}
+
+.browsequeue .win-itembox {
+    height: 208px;
+}
+
+/* Queue listview - ok to be an ID as it is unique */
+#queue-listview {
+    width:100%;
+    height: 659px;
+}
+
+@media screen and (-ms-view-state: snapped) {
+    .queue-snapped-gofullscreenbutton {
+        -ms-grid-row: 2;
+    }
+
+    .browsequeue .win-surface {
+        margin: 0 0 0 0;
+        padding: 0px;
+    }
+
+    #queue-listview {
+        -ms-grid-column: 1;
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 3;
+        height: 652px;
+    }
+
+    .browsequeue {
+        height: 100%;
+        -ms-grid-row: 4;
+        display: -ms-grid;
+       -ms-grid-columns: 1fr;
+       -ms-grid-rows: 1fr 10px 10px;
+    }
+}

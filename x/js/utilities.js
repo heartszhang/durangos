@@ -248,7 +248,7 @@
 
             // Close the AppBar
             document.getElementById("appbar").winControl.hide();
-        }
+        },
     });
 })();
 
