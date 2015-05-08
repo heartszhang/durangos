@@ -4,9 +4,9 @@
 
 
  /* File created by MIDL compiler version 8.00.0595 */
-/* at Fri May 08 09:55:40 2015
+/* at Fri May 08 14:33:42 2015
  */
-/* Compiler settings for C:\Users\Hearts\AppData\Local\Temp\hls.wrap.idl-6f260bbc:
+/* Compiler settings for C:\Users\Hearts\AppData\Local\Temp\hls.wrap.idl-e752208e:
     Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.00.0595 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 
@@ -31,6 +31,10 @@
 #error this stub requires an updated version of <rpcndr.h>
 #endif // __RPCNDR_H_VERSION__
 
+#ifndef COM_NO_WINDOWS_H
+#include "windows.h"
+#include "ole2.h"
+#endif /*COM_NO_WINDOWS_H*/
 
 #ifndef __hls2Ewrap_h_h__
 #define __hls2Ewrap_h_h__
@@ -49,6 +53,24 @@
 
 
 /* Forward Declarations */ 
+
+#ifndef ____x_ABI_Chls_Cwrap_CIDummy_FWD_DEFINED__
+#define ____x_ABI_Chls_Cwrap_CIDummy_FWD_DEFINED__
+typedef interface __x_ABI_Chls_Cwrap_CIDummy __x_ABI_Chls_Cwrap_CIDummy;
+
+#ifdef __cplusplus
+namespace ABI {
+    namespace hls {
+        namespace wrap {
+            interface IDummy;
+        } /* end namespace */
+    } /* end namespace */
+} /* end namespace */
+
+#endif /* __cplusplus */
+
+#endif 	/* ____x_ABI_Chls_Cwrap_CIDummy_FWD_DEFINED__ */
+
 
 /* header files for imported files */
 #include "inspectable.h"
@@ -90,6 +112,9 @@ extern const __declspec(selectany) WCHAR RuntimeClass_hls_wrap_HttpLiveProxySche
 #define RUNTIMECLASS_hls_wrap_Hls3ivxProxyByteStreamHandler_DEFINED
 extern const __declspec(selectany) WCHAR RuntimeClass_hls_wrap_Hls3ivxProxyByteStreamHandler[] = L"hls.wrap.Hls3ivxProxyByteStreamHandler";
 #endif
+#if !defined(____x_ABI_Chls_Cwrap_CIDummy_INTERFACE_DEFINED__)
+extern const __declspec(selectany) WCHAR InterfaceName_hls_wrap_IDummy[] = L"hls.wrap.IDummy";
+#endif /* !defined(____x_ABI_Chls_Cwrap_CIDummy_INTERFACE_DEFINED__) */
 
 
 /* interface __MIDL_itf_hls2Ewrap_0000_0000 */
@@ -100,6 +125,157 @@ extern const __declspec(selectany) WCHAR RuntimeClass_hls_wrap_Hls3ivxProxyByteS
 
 extern RPC_IF_HANDLE __MIDL_itf_hls2Ewrap_0000_0000_v0_0_c_ifspec;
 extern RPC_IF_HANDLE __MIDL_itf_hls2Ewrap_0000_0000_v0_0_s_ifspec;
+
+#ifndef ____x_ABI_Chls_Cwrap_CIDummy_INTERFACE_DEFINED__
+#define ____x_ABI_Chls_Cwrap_CIDummy_INTERFACE_DEFINED__
+
+/* interface __x_ABI_Chls_Cwrap_CIDummy */
+/* [uuid][object] */ 
+
+
+
+/* interface ABI::hls::wrap::IDummy */
+/* [uuid][object] */ 
+
+
+EXTERN_C const IID IID___x_ABI_Chls_Cwrap_CIDummy;
+
+#if defined(__cplusplus) && !defined(CINTERFACE)
+    } /* end extern "C" */
+    namespace ABI {
+        namespace hls {
+            namespace wrap {
+                
+                MIDL_INTERFACE("7DCCD41A-94B6-49BE-ACD6-3A306D2C427D")
+                IDummy : public IInspectable
+                {
+                public:
+                    virtual HRESULT STDMETHODCALLTYPE Hello( 
+                        /* [in] */ int a,
+                        /* [in] */ int b,
+                        /* [out][retval] */ int *value) = 0;
+                    
+                };
+
+                extern const __declspec(selectany) IID & IID_IDummy = __uuidof(IDummy);
+
+                
+            }  /* end namespace */
+        }  /* end namespace */
+    }  /* end namespace */
+    extern "C" { 
+    
+#else 	/* C style interface */
+
+    typedef struct __x_ABI_Chls_Cwrap_CIDummyVtbl
+    {
+        BEGIN_INTERFACE
+        
+        HRESULT ( STDMETHODCALLTYPE *QueryInterface )( 
+            __x_ABI_Chls_Cwrap_CIDummy * This,
+            /* [in] */ REFIID riid,
+            /* [annotation][iid_is][out] */ 
+            _COM_Outptr_  void **ppvObject);
+        
+        ULONG ( STDMETHODCALLTYPE *AddRef )( 
+            __x_ABI_Chls_Cwrap_CIDummy * This);
+        
+        ULONG ( STDMETHODCALLTYPE *Release )( 
+            __x_ABI_Chls_Cwrap_CIDummy * This);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetIids )( 
+            __x_ABI_Chls_Cwrap_CIDummy * This,
+            /* [out] */ ULONG *iidCount,
+            /* [size_is][size_is][out] */ IID **iids);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetRuntimeClassName )( 
+            __x_ABI_Chls_Cwrap_CIDummy * This,
+            /* [out] */ HSTRING *className);
+        
+        HRESULT ( STDMETHODCALLTYPE *GetTrustLevel )( 
+            __x_ABI_Chls_Cwrap_CIDummy * This,
+            /* [out] */ TrustLevel *trustLevel);
+        
+        HRESULT ( STDMETHODCALLTYPE *Hello )( 
+            __x_ABI_Chls_Cwrap_CIDummy * This,
+            /* [in] */ int a,
+            /* [in] */ int b,
+            /* [out][retval] */ int *value);
+        
+        END_INTERFACE
+    } __x_ABI_Chls_Cwrap_CIDummyVtbl;
+
+    interface __x_ABI_Chls_Cwrap_CIDummy
+    {
+        CONST_VTBL struct __x_ABI_Chls_Cwrap_CIDummyVtbl *lpVtbl;
+    };
+
+    
+
+#ifdef COBJMACROS
+
+
+#define __x_ABI_Chls_Cwrap_CIDummy_QueryInterface(This,riid,ppvObject)	\
+    ( (This)->lpVtbl -> QueryInterface(This,riid,ppvObject) ) 
+
+#define __x_ABI_Chls_Cwrap_CIDummy_AddRef(This)	\
+    ( (This)->lpVtbl -> AddRef(This) ) 
+
+#define __x_ABI_Chls_Cwrap_CIDummy_Release(This)	\
+    ( (This)->lpVtbl -> Release(This) ) 
+
+
+#define __x_ABI_Chls_Cwrap_CIDummy_GetIids(This,iidCount,iids)	\
+    ( (This)->lpVtbl -> GetIids(This,iidCount,iids) ) 
+
+#define __x_ABI_Chls_Cwrap_CIDummy_GetRuntimeClassName(This,className)	\
+    ( (This)->lpVtbl -> GetRuntimeClassName(This,className) ) 
+
+#define __x_ABI_Chls_Cwrap_CIDummy_GetTrustLevel(This,trustLevel)	\
+    ( (This)->lpVtbl -> GetTrustLevel(This,trustLevel) ) 
+
+
+#define __x_ABI_Chls_Cwrap_CIDummy_Hello(This,a,b,value)	\
+    ( (This)->lpVtbl -> Hello(This,a,b,value) ) 
+
+#endif /* COBJMACROS */
+
+
+#endif 	/* C style interface */
+
+
+
+
+#endif 	/* ____x_ABI_Chls_Cwrap_CIDummy_INTERFACE_DEFINED__ */
+
+
+/* interface __MIDL_itf_hls2Ewrap_0000_0001 */
+/* [local] */ 
+
+#ifdef __cplusplus
+namespace ABI {
+namespace hls {
+namespace wrap {
+class Dummy;
+} /*wrap*/
+} /*hls*/
+}
+#endif
+
+#ifndef RUNTIMECLASS_hls_wrap_Dummy_DEFINED
+#define RUNTIMECLASS_hls_wrap_Dummy_DEFINED
+extern const __declspec(selectany) WCHAR RuntimeClass_hls_wrap_Dummy[] = L"hls.wrap.Dummy";
+#endif
+
+
+/* interface __MIDL_itf_hls2Ewrap_0000_0001 */
+/* [local] */ 
+
+
+
+
+extern RPC_IF_HANDLE __MIDL_itf_hls2Ewrap_0000_0001_v0_0_c_ifspec;
+extern RPC_IF_HANDLE __MIDL_itf_hls2Ewrap_0000_0001_v0_0_s_ifspec;
 
 /* Additional Prototypes for ALL interfaces */
 

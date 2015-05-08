@@ -19,15 +19,15 @@
     };
 
     function buttonTestClicked(eventInfo) {
-      var url = "http-live://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
-      //var url = "http://gslb.bestvcdn.com.cloudcdn.net/218.77.90.58/gslb/program/Dbackct_bestvcdn_comD/_wogP000iG6_/FDN/FDNB1664649/prime.m3u8?_mdCode=9674414&_cdnCode=BTV&_type=0&_rCode=TerOut_21562&_userId=023513000031081&_categoryCode=SMG_OTT_TV_JT&_categoryPath=SMG_OTT_TV,SMG_OTT_TV_JT,&_adPositionId=01001000&_adCategorySource=0&_flag=.m3u8&_enCode=m3u8&_cms=ctv&_service=b2c&_cp=1&_back=FASTWEB&_BitRate=700,1300,2300,4000&taskID=pb02.idc.xbox.bestv.com.cn_14301850139636298&_client=104";
+      //var url = "http-live://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";
+      var url = "http-live://gslb.bestvcdn.com.cloudcdn.net/218.77.90.58/gslb/program/Dbackct_bestvcdn_comD/_wogP000iG6_/FDN/FDNB1664649/prime.m3u8?_mdCode=9674414&_cdnCode=BTV&_type=0&_rCode=TerOut_21562&_userId=023513000031081&_categoryCode=SMG_OTT_TV_JT&_categoryPath=SMG_OTT_TV,SMG_OTT_TV_JT,&_adPositionId=01001000&_adCategorySource=0&_flag=.m3u8&_enCode=m3u8&_cms=ctv&_service=b2c&_cp=1&_back=FASTWEB&_BitRate=700,1300,2300,4000&taskID=pb02.idc.xbox.bestv.com.cn_14301850139636298&_client=104";
       var control = document.querySelector("#player").winControl;
       var video = control.mediaElementAdapter.mediaElement;
       var me = document.querySelector("#video");
       //control.mediaElementAdapter.mediaElement.src = url;
 
 
-      control.mediaElementAdapter = new HlsMedia.HlsMediaElementAdapter(player, me, false);
+      control.mediaElementAdapter = new HlsMedia.HlsMediaElementAdapter(control, me, false);
       control.mediaElementAdapter.setHlsMedia(url, 0);
     };
 

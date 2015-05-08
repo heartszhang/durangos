@@ -16,6 +16,8 @@
     <ClCompile Include="asynccallbackfunc.cpp" />
     <ClCompile Include="lock.cpp" />
     <ClCompile Include="httpliveschemehandler.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="dummy.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
@@ -26,6 +28,7 @@
     <ClInclude Include="lock.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="httpliveschemehandler.h" />
+    <ClInclude Include="dummy.h" />
   </ItemGroup>
   <ItemGroup>
     <Midl Include="hls.wrap.idl" />

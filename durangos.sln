@@ -11,6 +11,16 @@ Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "durango.ism", "durango.ism\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hls.wrap", "hls.wrap\hls.wrap.vcxproj", "{E17F8965-2B3D-4E2A-875B-ECE577383BC7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "durango_xdk", "durango_xdk\durango_xdk.vcxproj", "{7C40AE81-F6D7-4632-AA84-4C4E91AD8827}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "durango_adk", "durango_adk\durango_adk.vcxproj", "{3AC40216-06A0-46FA-BF9B-1E68D3EC8D01}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "durango.adk", "durango.adk\durango.adk.vcxproj", "{CC32681C-09C1-4A98-A91A-C192686F1AC3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "durango.adk.wrl", "durango.adk.wrl\durango.adk.wrl.vcxproj", "{9668BCAA-14D7-4943-890F-CF71ADE8649F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "durango_wrl", "durango_wrl\durango_wrl.vcxproj", "{CAD7B626-457B-4C2B-813A-770D86FE0178}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Durango = Debug|Durango
@@ -56,6 +66,36 @@ Global
 		{E17F8965-2B3D-4E2A-875B-ECE577383BC7}.Profile|Durango.Build.0 = Profile|Durango
 		{E17F8965-2B3D-4E2A-875B-ECE577383BC7}.Release|Durango.ActiveCfg = Release|Durango
 		{E17F8965-2B3D-4E2A-875B-ECE577383BC7}.Release|Durango.Build.0 = Release|Durango
+		{7C40AE81-F6D7-4632-AA84-4C4E91AD8827}.Debug|Durango.ActiveCfg = Debug|Durango
+		{7C40AE81-F6D7-4632-AA84-4C4E91AD8827}.Debug|Durango.Build.0 = Debug|Durango
+		{7C40AE81-F6D7-4632-AA84-4C4E91AD8827}.Profile|Durango.ActiveCfg = Profile|Durango
+		{7C40AE81-F6D7-4632-AA84-4C4E91AD8827}.Profile|Durango.Build.0 = Profile|Durango
+		{7C40AE81-F6D7-4632-AA84-4C4E91AD8827}.Release|Durango.ActiveCfg = Release|Durango
+		{7C40AE81-F6D7-4632-AA84-4C4E91AD8827}.Release|Durango.Build.0 = Release|Durango
+		{3AC40216-06A0-46FA-BF9B-1E68D3EC8D01}.Debug|Durango.ActiveCfg = Debug|Durango
+		{3AC40216-06A0-46FA-BF9B-1E68D3EC8D01}.Debug|Durango.Build.0 = Debug|Durango
+		{3AC40216-06A0-46FA-BF9B-1E68D3EC8D01}.Profile|Durango.ActiveCfg = Profile|Durango
+		{3AC40216-06A0-46FA-BF9B-1E68D3EC8D01}.Profile|Durango.Build.0 = Profile|Durango
+		{3AC40216-06A0-46FA-BF9B-1E68D3EC8D01}.Release|Durango.ActiveCfg = Release|Durango
+		{3AC40216-06A0-46FA-BF9B-1E68D3EC8D01}.Release|Durango.Build.0 = Release|Durango
+		{CC32681C-09C1-4A98-A91A-C192686F1AC3}.Debug|Durango.ActiveCfg = Debug|Durango
+		{CC32681C-09C1-4A98-A91A-C192686F1AC3}.Debug|Durango.Build.0 = Debug|Durango
+		{CC32681C-09C1-4A98-A91A-C192686F1AC3}.Profile|Durango.ActiveCfg = Profile|Durango
+		{CC32681C-09C1-4A98-A91A-C192686F1AC3}.Profile|Durango.Build.0 = Profile|Durango
+		{CC32681C-09C1-4A98-A91A-C192686F1AC3}.Release|Durango.ActiveCfg = Release|Durango
+		{CC32681C-09C1-4A98-A91A-C192686F1AC3}.Release|Durango.Build.0 = Release|Durango
+		{9668BCAA-14D7-4943-890F-CF71ADE8649F}.Debug|Durango.ActiveCfg = Debug|Durango
+		{9668BCAA-14D7-4943-890F-CF71ADE8649F}.Debug|Durango.Build.0 = Debug|Durango
+		{9668BCAA-14D7-4943-890F-CF71ADE8649F}.Profile|Durango.ActiveCfg = Profile|Durango
+		{9668BCAA-14D7-4943-890F-CF71ADE8649F}.Profile|Durango.Build.0 = Profile|Durango
+		{9668BCAA-14D7-4943-890F-CF71ADE8649F}.Release|Durango.ActiveCfg = Release|Durango
+		{9668BCAA-14D7-4943-890F-CF71ADE8649F}.Release|Durango.Build.0 = Release|Durango
+		{CAD7B626-457B-4C2B-813A-770D86FE0178}.Debug|Durango.ActiveCfg = Debug|Durango
+		{CAD7B626-457B-4C2B-813A-770D86FE0178}.Debug|Durango.Build.0 = Debug|Durango
+		{CAD7B626-457B-4C2B-813A-770D86FE0178}.Profile|Durango.ActiveCfg = Profile|Durango
+		{CAD7B626-457B-4C2B-813A-770D86FE0178}.Profile|Durango.Build.0 = Profile|Durango
+		{CAD7B626-457B-4C2B-813A-770D86FE0178}.Release|Durango.ActiveCfg = Release|Durango
+		{CAD7B626-457B-4C2B-813A-770D86FE0178}.Release|Durango.Build.0 = Release|Durango
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

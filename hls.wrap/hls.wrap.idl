@@ -19,4 +19,13 @@ namespace hls{namespace wrap{
   runtimeclass Hls3ivxProxyByteStreamHandler{
     [default] interface Windows.Media.IMediaExtension;
   }
+
+  [uuid(7DCCD41A-94B6-49BE-ACD6-3A306D2C427D),version(COMPONENT_VERSION)]
+  interface IDummy : IInspectable {
+    HRESULT Hello( [in] int a, [in] int b, [out, retval] int* value );
+  };
+  [version(COMPONENT_VERSION), activatable(COMPONENT_VERSION)]
+  runtimeclass Dummy{
+    [default] interface IDummy;
+  }  
 }}

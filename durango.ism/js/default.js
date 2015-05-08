@@ -27,7 +27,8 @@
       var control = document.querySelector("#player").winControl;
       var video = control.mediaElementAdapter.mediaElement;
       var me = document.querySelector("#video");
-      control.mediaElementAdapter.mediaElement.src = url;
+      control.mediaElementAdapter.mediaElement.src = "http://lm.funshion.com:5050/livestream/0b49884b3b85f7ccddbe4e96e4ae2eae7a6dec56.m3u8?codec=ts";
+      //document.getElementById("video").src = "http-live://lm.funshion.com:5050/livestream/0b49884b3b85f7ccddbe4e96e4ae2eae7a6dec56.m3u8?codec=ts";
 
     };
 
