@@ -4,9 +4,9 @@
 
 
  /* File created by MIDL compiler version 8.00.0595 */
-/* at Thu May 07 15:28:52 2015
+/* at Fri May 08 09:55:40 2015
  */
-/* Compiler settings for C:\Users\Hearts\AppData\Local\Temp\hls.wrap.idl-ddb7748d:
+/* Compiler settings for C:\Users\Hearts\AppData\Local\Temp\hls.wrap.idl-6f260bbc:
     Oicf, W1, Zp8, env=Win64 (32b run), target_arch=AMD64 8.00.0595 
     protocol : dce , ms_ext, c_ext, robust
     error checks: allocation ref bounds_check enum stub_data 

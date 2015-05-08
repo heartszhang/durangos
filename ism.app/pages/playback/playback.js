@@ -14,6 +14,7 @@
     plugins.registerByteStreamHandler("Microsoft.Media.AdaptiveStreaming.SmoothByteStreamHandler", ".ism", "text/xml");
     plugins.registerByteStreamHandler("Microsoft.Media.AdaptiveStreaming.SmoothByteStreamHandler", ".ism", "application/vnd.ms-sstr+xml");
     plugins.registerByteStreamHandler("Windows.Xbox.Media.SmoothStreamingByteStreamHandler", null, ".m3u8", null);
+    plugins.registerSchemeHandler("hls.wrap.HttpLiveProxySchemeHandler", "http:");
     WinJS.UI.Pages.define("/pages/playback/playback.html", {
         // Whether the page is currently in an error state.
         _error: false,

@@ -15,7 +15,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <RootNamespace>hls_wrap</RootNamespace>
+    <RootNamespace>hls.wrap</RootNamespace>
     <ProjectGuid>{e17f8965-2b3d-4e2a-875b-ece577383bc7}</ProjectGuid>
     <DefaultLanguage>en-US</DefaultLanguage>
     <Keyword>Win32Proj</Keyword>
@@ -151,6 +151,11 @@
       <PreprocessorDefinitions>_WINRT_DLL;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <CompileAsWinRT>false</CompileAsWinRT>
     </ClCompile>
+    <CustomBuildStep />
+    <CustomBuildStep />
+    <CustomBuildStep>
+      <Command>mdmerge -metadata_dir "$(WindowsSDK_MetadataPath)" -o "$(SolutionDir)$(Platform)\$(Configuration)" -i "$(MSBuildProjectDirectory)" -v -partial</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="bytestreamhandlerproxy.h" />

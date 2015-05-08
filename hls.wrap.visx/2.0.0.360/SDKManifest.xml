@@ -1,0 +1,10 @@
+﻿<FileList
+  Identity = "hls.wrap, Version=2.0.0.360"
+  DisplayName = "hls wrap for xbox one"
+  MinVSVersion = "11.0"
+  MinToolsVersion = "4.0"
+  AppliesTo="VisualC | JavaScript"
+  TargetFramework="Xbox.adk, Version=8.0"
+  SupportsMultipleVersions="Error">
+  <File Reference = "hls.wrap.winmd" Implementation = "hls.wrap.dll"/>
+</FileList>

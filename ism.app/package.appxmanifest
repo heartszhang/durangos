@@ -46,6 +46,15 @@
                 <mx:VisionPipeline Version="1.0.0" />
             </mx:Kinect>
         </mx:PackageExtension>
+      <!-- 
+        <Extension Category="windows.activatableClass.inProcessServer">
+            <InProcessServer>
+                <Path>hls.wrap.dll</Path>
+                <ActivatableClass ActivatableClassId="hls.wrap.HttpLiveProxySchemeHandler" ThreadingModel="both" />
+                <ActivatableClass ActivatableClassId="hls.wrap.Hls3ivxProxyByteStreamHandler" ThreadingModel="both" />
+        </InProcessServer>
+      </Extension>
+     -->
     </Extensions>
     <Capabilities>
         <Capability Name="internetClientServer" />
